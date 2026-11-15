@@ -262,7 +262,7 @@ def main():
    <h1 id="home-title" class="visually-hidden">Nhat Minh Doan</h1>
    <p class="intro-copy">I’m Minh, a researcher at the Institute of Mathematics, VAST. I study hyperbolic surfaces and their length spectra.</p>
    <figure class="intro-illustration"><img src="assets/surfaces-banner.png?v={asset_revision("surfaces-banner.png")}" width="2046" height="652" alt="Illustrations of surfaces, curves, and decompositions"></figure>
-   <p class="intro-question">What can the lengths of curves reveal about a surface, and how does its geometry shape those lengths?</p>
+   <p class="intro-question">In the universe of surfaces, curves are the citizens. How does a surface’s geometry determine the lengths of its curves, and what can those lengths reveal about the surface?</p>
   </section>
   {featured_papers(papers)}
   <details class="bio-section" name="bio-section" id="academic-background">
