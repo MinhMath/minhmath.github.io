@@ -259,9 +259,10 @@ def main():
 <main id="main" tabindex="-1">
  <div class="intro content-width">
   <section class="home-intro" aria-labelledby="home-title">
-   <h1 id="home-title" class="research-question">What can lengths tell us about a surface?</h1>
+   <h1 id="home-title" class="visually-hidden">Nhat Minh Doan</h1>
    <p class="intro-copy">I’m Minh, a researcher at the Institute of Mathematics, VAST. I study hyperbolic surfaces and their length spectra.</p>
    <figure class="intro-illustration"><img src="assets/surfaces-banner.png?v={asset_revision("surfaces-banner.png")}" width="2046" height="652" alt="Illustrations of surfaces, curves, and decompositions"></figure>
+   <p class="intro-question">What can the lengths of curves reveal about a surface, and how does its geometry shape those lengths?</p>
   </section>
   {featured_papers(papers)}
   <details class="bio-section" name="bio-section" id="academic-background">
