@@ -141,6 +141,13 @@ button.home-primary[aria-expanded="true"] span { transform: rotate(180deg); }
   line-height: 1.55;
 }
 .background-list, .meeting-list { margin: 8px 0 0; padding-inline-start: 2em; }
+.meeting-note {
+  list-style: none;
+  margin: 10px 0;
+  padding: 8px 12px;
+  border-radius: 6px;
+  background: #f1f3f5;
+}
 .seminar-link { margin: 6px 0 0 1em; }
 
 .skip-link { position: fixed; top: -100px; left: 12px; z-index: 100; padding: 10px; background: white; }

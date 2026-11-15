@@ -188,6 +188,7 @@ def meetings_panel():
   ('September 2022', 'Singapore', 'Measuring Pants, NUS Topology and Geometry Seminar', 'https://www.math.nus.edu.sg/category/events/colloquia-seminars/topology-geometry-dynamics/page/14/'),
   ('August 2022', 'Vĩnh Phúc, Vietnam', 'Gặp gỡ Toán học 2022, workshop for early-career researchers', 'https://maths.hpu2.edu.vn/hoi-thao-khoa-hoc-cap-khoa--gap-go-toan-hoc-2022--hoi-thao-khoa-hoc-cac-nha-nghien-cuu-tre--thanh-cong-ruc-ro.html'),
   ('January 2022', 'Luxembourg', 'Geometry Winter Workshop and PhD defence, University of Luxembourg', None),
+  ('', None, 'During the COVID-19 pandemic, I spent one year in Luxembourg and one year in Ho Chi Minh City.', None),
   ('October 2019', 'Bordeaux, France', 'PhD Away Days, University of Luxembourg and University of Bordeaux', 'https://math.uni.lu/docsem/f/away_days2019/2019-PhDAwayDays_Abstracts.pdf'),
   ('July 2019', 'Chiang Mai, Thailand', 'Combinatorial and Algebraic Aspects of Geometric Structures, Chiang Mai University', 'https://www.math.science.cmu.ac.th/lst/Poster2019-05-13.pdf'),
   ('July 2019', 'Luxembourg', 'Interactions between Hyperbolic Geometry and Number Theory, University of Luxembourg', 'https://gaati.org/rahm/InteractionsConference/'),
@@ -200,6 +201,7 @@ def meetings_panel():
  ]
  rows=[
   f'    <li>{escape(date)} · <strong>{escape(place)}</strong> — {external(href,event) if href else escape(event)}</li>'
+  if place is not None else f'    <li class="meeting-note">{escape(event)}</li>'
   for date,place,event,href in meetings
  ]
  return '\n'.join(['   <ul class="meeting-list">', *rows, '   </ul>'])
