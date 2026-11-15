@@ -189,6 +189,7 @@ def meetings_panel():
   ('August 2022', 'Vĩnh Phúc, Vietnam', 'Gặp gỡ Toán học 2022, workshop for early-career researchers', 'https://maths.hpu2.edu.vn/hoi-thao-khoa-hoc-cap-khoa--gap-go-toan-hoc-2022--hoi-thao-khoa-hoc-cac-nha-nghien-cuu-tre--thanh-cong-ruc-ro.html'),
   ('January 2022', 'Luxembourg', 'Geometry Winter Workshop and PhD defence, University of Luxembourg', None),
   ('', None, 'During the COVID-19 pandemic, I spent one year in Luxembourg and one year in Ho Chi Minh City.', None),
+  ('January 2020', 'Luxembourg', 'Lost in Translation Surfaces, University of Luxembourg', 'https://math.uni.lu/geometry/sos2020/'),
   ('October 2019', 'Bordeaux, France', 'PhD Away Days, University of Luxembourg and University of Bordeaux', 'https://math.uni.lu/docsem/f/away_days2019/2019-PhDAwayDays_Abstracts.pdf'),
   ('July 2019', 'Chiang Mai, Thailand', 'Combinatorial and Algebraic Aspects of Geometric Structures, Chiang Mai University', 'https://www.math.science.cmu.ac.th/lst/Poster2019-05-13.pdf'),
   ('July 2019', 'Luxembourg', 'Interactions between Hyperbolic Geometry and Number Theory, University of Luxembourg', 'https://gaati.org/rahm/InteractionsConference/'),
