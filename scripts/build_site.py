@@ -158,6 +158,7 @@ def papers_embed():
 
 def meetings_panel():
  meetings=[
+  ('Summer 2027', 'Singapore', 'Planned visit', None),
   ('August–September 2026', 'Shijiazhuang, China', 'Hyperbolic 2026 at Hebei Normal University', 'https://ahdoc.github.io/hyperbolic2026shijiazhuang/abstract'),
   ('July–August 2026', 'Jeju, South Korea', '2K-GATE Conference III', 'https://sites.google.com/view/2k-gate-workshop-3/home'),
   ('June 2026', 'Hanoi, Vietnam', 'Seminar, Thang Long Institute of Mathematics and Applied Sciences', None),
