@@ -4,7 +4,7 @@
 
 **Total citation records:** 27 | **Bibliography verified:** 25 | **Scholar-listed, full text pending:** 2 | **Self citations:** 13 | **Non-self citations:** 14
 
-Collection status: **partial**. Last saved discovery: 2026-11-18T08:42:07+00:00.
+Collection status: **partial**. Last saved discovery: 2026-11-19T08:56:49+00:00.
 
 | Canonical paper | Verified citations | Scholar-listed | Unverified candidates |
 |---|---:|---:|---:|
@@ -34,7 +34,7 @@ Collection status: **partial**. Last saved discovery: 2026-11-18T08:42:07+00:00.
   Reference excerpt: 5. Harvey Cohn,Approach to Markoff’s Minimal Forms Through Modular Functions, Annals of Mathe- matics61(1955), no. 1, 1–12. MR0067935 6. Charles de la Vall´ ee Poussin,Sur la fonctionζ(s)de Riemann et le nombre des nombres premiers inf´ erieurs ` a une limite donn´ ee, M´ emoires de l’Acad´ emie royale de Belgique59(1899), no. 1, 1–74. 7. Nhat Minh Doan, Xiaobin Li, and Van Nguyen,Stable-norm boundary geometry on once-punctured tori, October 2026, arXiv:2605.14574v3.
 - [Density of Triple Coincidences in the Simple Length Spectrum of One-holed Tori](https://zenodo.org/records/22998822) — Hu Tan; Ying Zhang; independent. Verified in Zenodo PDF bibliography.
   Reference excerpt: [3] N. M. Doan, X. Li, and V . Nguyen, McShane–Rivin norm balls and simple-length multi- plicities. 2026, arXiv:2605.14574
-- [PARAMETER MONOTONICITY FOR GENERALIZED k-MARKOV NUMBERS](https://hexagonmath.org/2611.00023v1) — Qiyue Tang; independent. Verified in HexagonMath HTML bibliography.
+- [PARAMETER MONOTONICITY FOR GENERALIZED k-MARKOV NUMBERS](https://hexagonmath.org/2611.00023v2) — Qiyue Tang; independent. Verified in HexagonMath HTML bibliography.
   Reference excerpt: N. M. Doan, X. Li, and V. Nguyen, Stable-norm boundary geometry on once-punctured tori , arXiv:2605.14574v3 (https://arxiv.org/abs/2605.14574v3) (2026). arXiv
 - [Patterns in the Markov Numbers and Their Generalizations](https://arxiv.org/abs/2609.14149) — Cormac O'Sullivan; independent. Verified in arXiv PDF bibliography.
   Reference excerpt: [DLN26] Nhat Minh Doan, Xiaobin Li, and V an Nguyen. McShane- Rivin norm balls and simple-length multiplici- ties. arXiv: 2605.14574, 2026.
@@ -52,7 +52,7 @@ Collection status: **partial**. Last saved discovery: 2026-11-18T08:42:07+00:00.
 
 ### Almost all simple lengths are unique up to isometry
 
-- [Almost all k-Markov numbers are unique](https://hexagonmath.org/2611.00216v1) — Qiyue Tang; independent. Verified in HexagonMath HTML bibliography.
+- [Almost all k-Markov numbers are unique](https://hexagonmath.org/2611.00216v2) — Qiyue Tang; independent. Verified in HexagonMath HTML bibliography.
   Reference excerpt: N. M. Doan, Almost all simple lengths are unique up to isometry , preprint (2026), Hexagon:2610.00298v1 (https://hexagonmath.org/2610.00298v1). hexagon
 
 ### Some arithmetic aspects of ortho-integral surfaces
@@ -110,8 +110,8 @@ Collection status: **partial**. Last saved discovery: 2026-11-18T08:42:07+00:00.
 | publisher_bibliographies | completed_requests |
 | known_bibliographies | completed_requests |
 | zenodo_authors | completed_requests |
-| openalex | deferred_after_error |
-| openalex_fulltext | deferred_after_error |
+| openalex | completed_requests |
+| openalex_fulltext | completed_requests |
 | semantic | deferred_after_error |
 | opencitations | completed_requests |
 | hexagon | completed_requests |
@@ -119,7 +119,6 @@ Collection status: **partial**. Last saved discovery: 2026-11-18T08:42:07+00:00.
 
 Collection limitations:
 
-- api.openalex.org: HTTP 429; remaining requests to this host deferred until the next run
 - api.semanticscholar.org: HTTP 429; remaining requests to this host deferred until the next run
 - PDF HTTP 403: https://onlinelibrary.wiley.com/doi/pdfdirect/10.1112/blms.13080
 
