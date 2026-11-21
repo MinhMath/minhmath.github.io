@@ -37,12 +37,19 @@
       justify-content: space-between;
       gap: .7rem 1.25rem;
     }
+    .version-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: .5rem;
+    }
     time {
       display: block;
       color: #475569;
       font-size: .9rem;
     }
-    button {
+    button, .pdf-action {
+      box-sizing: border-box;
       min-height: 2.75rem;
       padding: .45rem .9rem;
       border: 1px solid #174775;
@@ -52,10 +59,20 @@
       font: inherit;
       cursor: pointer;
     }
+    .pdf-action {
+      display: inline-flex;
+      align-items: center;
+      background: #fff;
+      color: #174775;
+      text-decoration: none;
+    }
+    .pdf-action:hover {
+      background: #eef4fa;
+    }
     button:hover:not(:disabled) {
       background: #103756;
     }
-    button:focus-visible {
+    button:focus-visible, .pdf-action:focus-visible {
       outline: 2px solid #174775;
       outline-offset: 3px;
     }
@@ -77,28 +94,10 @@
     <h1>The torus with asymptotically the fewest simple closed geodesics</h1>
     <p>Phuc Thinh Dang, Trong Toan Dao, and Nhat Minh Doan</p>
 
-    <h2>LaTeX versions</h2>
+    <h2>Manuscript versions</h2>
     <ol role="list">
-      <li>
-        <div class="version-row">
-          <div id="latest-version">
-            <strong>Latest version</strong>
-            <time datetime="2026-11-21T09:55:58+07:00">21 November 2026, 09:55:58 (Vietnam time)</time>
-          </div>
-          <button type="button" aria-describedby="latest-version" data-source="/o/mr_area_revised.tex" disabled>Copy LaTeX</button>
-        </div>
-        <p class="copy-status" role="status"></p>
-      </li>
-      <li>
-        <div class="version-row">
-          <div id="previous-version">
-            <strong>Previous version</strong>
-            <time datetime="2026-11-21T09:41:15+07:00">21 November 2026, 09:41:15 (Vietnam time)</time>
-          </div>
-          <button type="button" aria-describedby="previous-version" data-source="/o/versions/2026-11-21-094115.tex" disabled>Copy LaTeX</button>
-        </div>
-        <p class="copy-status" role="status"></p>
-      </li>
+      <!-- BEGIN MANUSCRIPT VERSIONS -->
+      <!-- END MANUSCRIPT VERSIONS -->
     </ol>
     <noscript><p>Enable JavaScript to copy LaTeX.</p></noscript>
   </main>
