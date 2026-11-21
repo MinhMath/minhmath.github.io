@@ -2925,23 +2925,70 @@ $$
 \end{proposition}
 
 \begin{proof}
-Let $t$ be as in \eqref{eq:t}. If $t=0$, then $X=\Xmod$ and equality
-holds. For $t>0$, write $(u,v,w)=t(a,b,c)$. With the initial Farey
-triangle fixed, let $X(\tau)$ have logarithmic coordinates
-$\tau(a,b,c)$ for $0\leq\tau\leq t$. Then $X(0)=\Xmod$ and $X(t)=X$.
+If $X=\Xmod$, the inequality is an equality. Assume $X\ne\Xmod$.
+Let $t$ be as in \eqref{eq:t}. Write $(u,v,w)=t(a,b,c)$. With the
+initial Farey triangle fixed, let $X(\tau)$ be the torus with
+logarithmic coordinates $\tau(a,b,c)$ for $0\leq\tau\leq t$.
+Then $X(0)=\Xmod$ and $X(t)=X$.
 
-The initial trace triple $(x(\tau),y(\tau),z(\tau))$ stays reduced.
-Indeed, \eqref{eq:shape-trace-parametrization} and reducedness at
-$\tau=t$ give $a\leq b\leq c$, so $x(\tau)\leq y(\tau)\leq z(\tau)$.
-Also $x(\tau)=e^{3a\tau}+2\cosh((b-c)\tau)>2$, and
+The initial triple stays reduced along the segment. By
+\eqref{eq:shape-trace-parametrization}, reducedness at $\tau=t$
+gives $a\leq b\leq c$, so $x(\tau)\leq y(\tau)\leq z(\tau)$.
+Also $x(\tau)=e^{3a\tau}+2\cosh((b-c)\tau)>2$. Since $a-c$ and
+$b-c$ are nonpositive,
 $$
 \frac{x(\tau)y(\tau)}{z(\tau)}
 =1+e^{2(a-c)\tau}+e^{2(b-c)\tau}
-\geq\frac{x(t)y(t)}{z(t)}\geq 2.
+\geq \frac{x(t)y(t)}{z(t)}\geq 2.
 $$
-Thus the child-length formula \eqref{eq:child-length} applies to
-outward Farey insertions throughout the segment.
-Figure~\ref{fig:reduced-logarithmic-segment} shows an example.
+
+For a primitive class $\gamma$ of sector height $h$, we first estimate how far
+$L_\gamma(t)$ can lie above its tangent line at $\tau=0$. In particular, we will show that
+\begin{equation}
+\label{eq:length-tangent-remainder}
+R_\gamma:=L_\gamma(t)-L_\gamma(0)-tL_\gamma'(0)
+\leq\frac{27}{10}h^2p_2.
+\end{equation}
+
+Suppose $h=1$, and let $f(\tau)$ be the logarithm of the trace of
+$\gamma$. By cyclically relabeling $a,b,c$, we may take $\gamma$ to
+correspond to $a$. Then \eqref{eq:shape-trace-parametrization} and
+$a+b+c=0$ give
+$$
+f(\tau)=a\tau+\log\bigl(e^{2a\tau}+e^{2b\tau}+e^{2c\tau}\bigr).
+$$
+With sums taken over cyclic permutations of $a,b,c$, differentiation gives
+$$
+f''(\tau)
+=4\frac{\sum_{\mathrm{cyclic}}(a-b)^2e^{2(a+b)\tau}}
+           {(e^{2a\tau}+e^{2b\tau}+e^{2c\tau})^2}
+\leq 8\sum_{\mathrm{cyclic}}a^2
+  \frac{e^{2a\tau}(e^{2b\tau}+e^{2c\tau})}
+       {(e^{2a\tau}+e^{2b\tau}+e^{2c\tau})^2}
+\leq 2(a^2+b^2+c^2)=\frac{2p_2}{t^2}.
+$$
+The first inequality uses $(a-b)^2\leq 2(a^2+b^2)$, and the second
+uses that each fraction is at most $1/4$ by the AM-GM inequality. 
+Integrating by parts and using $f''(\tau)\leq 2p_2/t^2$, we obtain
+\begin{equation}\label{eq:remainderf}
+  f(t)-f(0)-tf'(0)
+=\int_0^t(t-\tau)f''(\tau)\mathrm{d}\tau
+\leq p_2.  
+\end{equation}
+To pass from trace to length, write $L_\gamma=g\circ f$, where
+$g(s)=2\arccosh(e^s/2)$. Since $g$ is concave and $f(0)=\log 3$, we have
+$
+g(f(t))-g(f(0))\leq g'(\log 3)\bigl(f(t)-f(0)\bigr).
+$
+Thus the chain rule and \eqref{eq:remainderf} give
+$$
+R_\gamma
+=g(f(t))-g(f(0))-tg'(\log 3)f'(0)\leq g'(\log 3)\bigl(f(t)-f(0)-tf'(0)\bigr)\leq \frac{6}{\sqrt{5}}p_2
+\leq \frac{27}{10}p_2.
+$$
+
+% In the preamble:
+% \usetikzlibrary{decorations.markings}
 
 \begin{figure}[ht]
 \centering
@@ -2986,55 +3033,13 @@ Figure~\ref{fig:reduced-logarithmic-segment} shows an example.
 $0\leq\tau\leq t=1/5$, shown in $(x,y)$ trace coordinates.
 The arrow points from the modular torus toward $X(t)$.
 The shaded area is the visible part of the reduced region.}
-\label{fig:reduced-logarithmic-segment}
 \end{figure}
 
-For a primitive class $\gamma$ of sector height $h$, we first prove
-\begin{equation}
-\label{eq:length-tangent-remainder}
-R_\gamma:=L_\gamma(t)-L_\gamma(0)-tL_\gamma'(0)
-\leq\frac{27}{10}h^2p_2.
-\end{equation}
-
-Suppose $h=1$, and let $f(\tau)$ be the logarithm of the trace of
-$\gamma$. By cyclically relabeling $a,b,c$, we may take $\gamma$ to
-correspond to $a$. Then \eqref{eq:shape-trace-parametrization} and
-$a+b+c=0$ give
-$$
-f(\tau)=a\tau+\log\bigl(e^{2a\tau}+e^{2b\tau}+e^{2c\tau}\bigr).
-$$
-With sums taken over cyclic permutations of $a,b,c$, differentiation gives
-$$
-f''(\tau)
-=4\frac{\sum_{\mathrm{cyclic}}(a-b)^2e^{2(a+b)\tau}}
-           {(e^{2a\tau}+e^{2b\tau}+e^{2c\tau})^2}
-\leq 8\sum_{\mathrm{cyclic}}a^2
-  \frac{e^{2a\tau}(e^{2b\tau}+e^{2c\tau})}
-       {(e^{2a\tau}+e^{2b\tau}+e^{2c\tau})^2}
-\leq 2(a^2+b^2+c^2)=\frac{2p_2}{t^2}.
-$$
-The first inequality uses $(a-b)^2\leq 2(a^2+b^2)$, and the second
-uses that each fraction is at most $1/4$ by the AM-GM inequality. 
-Integrating by parts and using $f''(\tau)\leq 2p_2/t^2$, we obtain
-\begin{equation}\label{eq:remainderf}
-  f(t)-f(0)-tf'(0)
-=\int_0^t(t-\tau)f''(\tau)\mathrm{d}\tau
-\leq p_2.  
-\end{equation}
-To pass from trace to length, write $L_\gamma=g\circ f$, where
-$g(s)=2\arccosh(e^s/2)$. Since $g$ is concave and $f(0)=\log 3$, we have
-$
-g(f(t))-g(f(0))\leq g'(\log 3)\bigl(f(t)-f(0)\bigr).
-$
-Thus the chain rule and \eqref{eq:remainderf} give
-$$
-R_\gamma
-=g(f(t))-g(f(0))-tg'(\log 3)f'(0)\leq g'(\log 3)\bigl(f(t)-f(0)-tf'(0)\bigr)\leq \frac{6}{\sqrt{5}}p_2
-\leq \frac{27}{10}p_2.
-$$
-
-Let $u_1,v_1$ be parents of heights $m,n$ and put $H=m+n$.
-Subtracting the tangent line in
+At $\tau=t$ the initial triangle is reduced, and near $\tau=0$ its
+Vieta moves strictly increase the replaced traces. Thus outward
+insertions use the larger root at $\tau=t$ and near $\tau=0$
+by Proposition~\ref{prop:markoff-reduction}. Let $u_1,v_1$ be parents
+of heights $m,n$ and put $H=m+n$. Subtracting the tangent line in
 $L_{u_1+v_1}=L_{u_1}+L_{v_1}-\delta$ and using convexity of $\delta$
 gives
 $$
@@ -3053,7 +3058,7 @@ $R_{u_1+v_1}\leq(27/10)H^2p_2$, proving
 \eqref{eq:length-tangent-remainder}.
 
 Fix parents $u_1,v_1$ of heights $m,n$ with $H=m+n\geq7$.
-Along the segment, \eqref{eq:child-length} gives
+At $\tau=t$ and near $\tau=0$, the same larger-root choice gives
 $S_{X(\tau)}(u_1,v_1)=\mathcal D(L_{u_1}(\tau),L_{v_1}(\tau))$.
 
 Evaluate $\mathcal D_1,\mathcal D_2$ at the modular parent lengths.
