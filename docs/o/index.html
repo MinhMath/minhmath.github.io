@@ -7,13 +7,68 @@
   <style>
     body {
       max-width: 42rem;
-      margin: 4rem auto;
+      margin: clamp(2rem, 8vw, 4rem) auto;
       padding: 0 1.25rem;
       font: 1rem/1.55 system-ui, sans-serif;
+      color: #17212b;
+      background: #fff;
     }
     h1 {
       font-size: 1.75rem;
       line-height: 1.2;
+    }
+    h2 {
+      margin-top: 2rem;
+      font-size: 1.15rem;
+    }
+    ol {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    li {
+      padding: .9rem 0;
+      border-top: 1px solid #dce1e6;
+    }
+    .version-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: .7rem 1.25rem;
+    }
+    time {
+      display: block;
+      color: #475569;
+      font-size: .9rem;
+    }
+    button {
+      min-height: 2.75rem;
+      padding: .45rem .9rem;
+      border: 1px solid #174775;
+      border-radius: .35rem;
+      background: #174775;
+      color: #fff;
+      font: inherit;
+      cursor: pointer;
+    }
+    button:hover:not(:disabled) {
+      background: #103756;
+    }
+    button:focus-visible {
+      outline: 2px solid #174775;
+      outline-offset: 3px;
+    }
+    button:disabled {
+      opacity: .7;
+      cursor: wait;
+    }
+    .copy-status {
+      margin: .45rem 0 0;
+      font-size: .9rem;
+    }
+    .copy-status:empty {
+      margin: 0;
     }
   </style>
 </head>
@@ -21,7 +76,73 @@
   <main>
     <h1>The torus with asymptotically the fewest simple closed geodesics</h1>
     <p>Phuc Thinh Dang, Trong Toan Dao, and Nhat Minh Doan</p>
-    <p><a href="/o/mr_area_revised.tex" download>Download the revised LaTeX source</a></p>
+
+    <h2>LaTeX versions</h2>
+    <ol role="list">
+      <li>
+        <div class="version-row">
+          <div id="latest-version">
+            <strong>Latest version</strong>
+            <time datetime="2026-11-21T09:55:58+07:00">21 November 2026, 09:55:58 (Vietnam time)</time>
+          </div>
+          <button type="button" aria-describedby="latest-version" data-source="/o/mr_area_revised.tex" disabled>Copy LaTeX</button>
+        </div>
+        <p class="copy-status" role="status"></p>
+      </li>
+      <li>
+        <div class="version-row">
+          <div id="previous-version">
+            <strong>Previous version</strong>
+            <time datetime="2026-11-21T09:41:15+07:00">21 November 2026, 09:41:15 (Vietnam time)</time>
+          </div>
+          <button type="button" aria-describedby="previous-version" data-source="/o/versions/2026-11-21-094115.tex" disabled>Copy LaTeX</button>
+        </div>
+        <p class="copy-status" role="status"></p>
+      </li>
+    </ol>
+    <noscript><p>Enable JavaScript to copy LaTeX.</p></noscript>
   </main>
+  <script>
+    for (const button of document.querySelectorAll("button[data-source]")) {
+      const status = button.closest("li").querySelector('[role="status"]');
+      let source;
+
+      async function loadSource() {
+        button.disabled = true;
+        button.textContent = "Loading LaTeX…";
+        status.textContent = "";
+
+        try {
+          const response = await fetch(button.dataset.source, { cache: "no-cache" });
+          if (!response.ok) throw new Error("LaTeX source could not be loaded.");
+          source = await response.text();
+          button.textContent = "Copy LaTeX";
+        } catch {
+          button.textContent = "Retry loading LaTeX";
+          status.textContent = "Could not load this version.";
+        } finally {
+          button.disabled = false;
+        }
+      }
+
+      button.addEventListener("click", async () => {
+        if (source === undefined) {
+          await loadSource();
+          return;
+        }
+
+        status.textContent = "";
+        try {
+          await navigator.clipboard.writeText(source);
+          status.textContent = "Copied to clipboard.";
+        } catch {
+          status.textContent = "Could not copy to the clipboard. Try again.";
+        }
+      });
+
+      // Keep the clipboard write inside the click gesture by loading the text first.
+      loadSource();
+    }
+  </script>
 </body>
 </html>
