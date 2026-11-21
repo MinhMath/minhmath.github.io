@@ -6,6 +6,7 @@ import hashlib
 import re
 from shutil import copyfile
 from pathlib import Path
+from meetings_map import meetings_map
 ROOT=Path(__file__).resolve().parents[1]
 DOCS=ROOT/'docs'
 BASE='https://minhmath.github.io/'
@@ -213,7 +214,7 @@ def meetings_panel():
   if place is not None else f'    <li class="meeting-note">{escape(event)}</li>'
   for date,place,event,href in meetings
  ]
- return '\n'.join(['   <ul class="meeting-list">', *rows, '   </ul>'])
+ return meetings_map()+'\n'+'\n'.join(['   <ul class="meeting-list">', *rows, '   </ul>'])
 
 def cv_panel(papers):
  manifest=json.loads((DOCS/'assets/cv-pages.json').read_text())
