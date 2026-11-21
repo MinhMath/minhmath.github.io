@@ -10,6 +10,7 @@
 \usepackage{booktabs}
 \usepackage{graphicx}
 \usepackage{tikz}
+\usetikzlibrary{decorations.markings}
 \usepackage{pgfplots}
 \usepgfplotslibrary{groupplots}
 \pgfplotsset{compat=1.17}
@@ -1029,7 +1030,7 @@ substantial effort to simplifying several long and tedious
 calculations and making them accessible to a broader readership.
 The second-named author is supported by the NUS President Graduate Fellowship. 
 
-\section{Trace coordinates and Farey polygons}
+\section{Preliminaries}
 \label{sec:coordinates}
 
 This section introduces the notations, coordinates, area formulas,
@@ -2924,52 +2925,116 @@ $$
 \end{proposition}
 
 \begin{proof}
-Let $t$ be as in \eqref{eq:t}. Write $(u,v,w)=t(a,b,c)$. With the
-initial Farey triangle fixed, let $X(\tau)$ be the torus with
-logarithmic coordinates $\tau(a,b,c)$ for $0\leq\tau\leq t$.
-Then $X(0)=\Xmod$ and $X(t)=X$.
-For a primitive class $\gamma$ of sector height $h$, we first estimate how far
-$L_\gamma(t)$ can lie above its tangent line at $\tau=0$. In particular, we will show that
+Let $t$ be as in \eqref{eq:t}. If $t=0$, then $X=\Xmod$ and equality
+holds. For $t>0$, write $(u,v,w)=t(a,b,c)$. With the initial Farey
+triangle fixed, let $X(\tau)$ have logarithmic coordinates
+$\tau(a,b,c)$ for $0\leq\tau\leq t$. Then $X(0)=\Xmod$ and $X(t)=X$.
+
+The initial trace triple $(x(\tau),y(\tau),z(\tau))$ stays reduced.
+Indeed, \eqref{eq:shape-trace-parametrization} and reducedness at
+$\tau=t$ give $a\leq b\leq c$, so $x(\tau)\leq y(\tau)\leq z(\tau)$.
+Also $x(\tau)=e^{3a\tau}+2\cosh((b-c)\tau)>2$, and
+$$
+\frac{x(\tau)y(\tau)}{z(\tau)}
+=1+e^{2(a-c)\tau}+e^{2(b-c)\tau}
+\geq\frac{x(t)y(t)}{z(t)}\geq 2.
+$$
+Thus the child-length formula \eqref{eq:child-length} applies to
+outward Farey insertions throughout the segment.
+Figure~\ref{fig:reduced-logarithmic-segment} shows an example.
+
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}[x=10cm,y=4cm,line cap=round,line join=round,font=\small]
+\def\xleft{2.45}
+\pgfmathsetmacro{\xswitch}{2*sqrt(2)}
+
+% The upper boundary is z=y. The lower boundary is z=xy/2
+% to the left of x=2\sqrt{2} and y=x to its right.
+\fill[black!10]
+  plot[domain=\xleft:3,samples=80] (\x,{\x/sqrt(\x-2)})
+  -- (\xswitch,\xswitch)
+  -- plot[domain=\xswitch:\xleft,samples=80] (\x,{2*\x/sqrt(\x*\x-4)})
+  -- cycle;
+\draw[black!65]
+  plot[domain=\xleft:3,samples=80] (\x,{\x/sqrt(\x-2)})
+  -- (\xswitch,\xswitch)
+  -- plot[domain=\xswitch:\xleft,samples=80] (\x,{2*\x/sqrt(\x*\x-4)});
+
+\draw[->] (2.40,2.76) -- (3.16,2.76) node[right] {$x$};
+\draw[->] (2.40,2.76) -- (2.40,3.73) node[above] {$y$};
+\foreach \tick in {2.5,2.75,3}
+  \draw (\tick,2.78) -- (\tick,2.74) node[below] {$\tick$};
+\foreach \tick in {3,3.25,3.5}
+  \draw (2.41,\tick) -- (2.39,\tick) node[left] {$\tick$};
+
+% Trace coordinates for (u,v,w)=\tau(-1,1/4,3/4).
+\def\tracefactor#1{(exp(-2*(#1))+exp((#1)/2)+exp(3*(#1)/2))}
+\draw[blue!75!black,very thick,
+  postaction={decorate},
+  decoration={markings,mark=at position 0.52 with {\arrow{>}}}]
+  plot[variable=\s,domain=0:0.2,samples=60]
+  ({exp(-\s)*\tracefactor{\s}},{exp(\s/4)*\tracefactor{\s}});
+
+\fill[blue!75!black] (3,3) circle[radius=1.3pt]
+  node[right,black] {$\tau=0$};
+\fill[blue!75!black]
+  ({exp(-0.2)*\tracefactor{0.2}},{exp(0.05)*\tracefactor{0.2}})
+  circle[radius=1.3pt] node[above right,black] {$\tau=t$};
+\end{tikzpicture}
+\caption{The logarithmic segment $(u,v,w)=\tau(-1,1/4,3/4)$ for
+$0\leq\tau\leq t=1/5$, shown in $(x,y)$ trace coordinates.
+The arrow points from the modular torus toward $X(t)$.
+The shaded area is the visible part of the reduced region.}
+\label{fig:reduced-logarithmic-segment}
+\end{figure}
+
+For a primitive class $\gamma$ of sector height $h$, we first prove
 \begin{equation}
 \label{eq:length-tangent-remainder}
 R_\gamma:=L_\gamma(t)-L_\gamma(0)-tL_\gamma'(0)
 \leq\frac{27}{10}h^2p_2.
 \end{equation}
 
-Suppose first that $h=1$. Let $f(\tau)$ be the logarithm of the trace of
-$\gamma$. By \eqref{eq:shape-trace-parametrization}, after permuting
-$a,b,c$ we have
+Suppose $h=1$, and let $f(\tau)$ be the logarithm of the trace of
+$\gamma$. By cyclically relabeling $a,b,c$, we may take $\gamma$ to
+correspond to $a$. Then \eqref{eq:shape-trace-parametrization} and
+$a+b+c=0$ give
 $$
-f(\tau)=\log\bigl(e^{3a\tau}+e^{(b-c)\tau}+e^{(c-b)\tau}\bigr).
+f(\tau)=a\tau+\log\bigl(e^{2a\tau}+e^{2b\tau}+e^{2c\tau}\bigr).
 $$
-Since $a+b+c=0$, the differences between the three exponential rates
-are $2(a-b)$, $2(a-c)$, and $2(b-c)$. Each has absolute value at most
-$2\sqrt{2p_2}/t$, since $p_2=t^2(a^2+b^2+c^2)$.
-
-Differentiating twice, we find that $f''(\tau)$ is the weighted variance
-of the three rates, with weights given by the three exponential terms
-divided by their sum. Measuring squared distances from the midpoint
-of the interval containing the rates gives an upper bound for this
-variance. Each rate lies within $\sqrt{2p_2}/t$ of that midpoint, so
-$f''(\tau)\leq 2p_2/t^2$. Taylor's formula \eqref{eq:taylor-segment}
-therefore gives $f(t)-f(0)-tf'(0)\leq p_2$.
-
+With sums taken over cyclic permutations of $a,b,c$, differentiation gives
+$$
+f''(\tau)
+=4\frac{\sum_{\mathrm{cyclic}}(a-b)^2e^{2(a+b)\tau}}
+           {(e^{2a\tau}+e^{2b\tau}+e^{2c\tau})^2}
+\leq 8\sum_{\mathrm{cyclic}}a^2
+  \frac{e^{2a\tau}(e^{2b\tau}+e^{2c\tau})}
+       {(e^{2a\tau}+e^{2b\tau}+e^{2c\tau})^2}
+\leq 2(a^2+b^2+c^2)=\frac{2p_2}{t^2}.
+$$
+The first inequality uses $(a-b)^2\leq 2(a^2+b^2)$, and the second
+uses that each fraction is at most $1/4$ by the AM-GM inequality. 
+Integrating by parts and using $f''(\tau)\leq 2p_2/t^2$, we obtain
+\begin{equation}\label{eq:remainderf}
+  f(t)-f(0)-tf'(0)
+=\int_0^t(t-\tau)f''(\tau)\mathrm{d}\tau
+\leq p_2.  
+\end{equation}
 To pass from trace to length, write $L_\gamma=g\circ f$, where
-$g(s)=2\arccosh(e^s/2)$. The function $g$ is increasing and concave,
-so its graph lies below its tangent line at $f(0)=\log 3$.
-Using $L_\gamma'(0)=g'(\log 3)f'(0)$, we obtain
+$g(s)=2\arccosh(e^s/2)$. Since $g$ is concave and $f(0)=\log 3$, we have
+$
+g(f(t))-g(f(0))\leq g'(\log 3)\bigl(f(t)-f(0)\bigr).
+$
+Thus the chain rule and \eqref{eq:remainderf} give
 $$
 R_\gamma
-\leq g'(\log 3)\bigl(f(t)-f(0)-tf'(0)\bigr)
-\leq\frac{6}{\sqrt{5}}p_2
-\leq\frac{27}{10}p_2.
+=g(f(t))-g(f(0))-tg'(\log 3)f'(0)\leq g'(\log 3)\bigl(f(t)-f(0)-tf'(0)\bigr)\leq \frac{6}{\sqrt{5}}p_2
+\leq \frac{27}{10}p_2.
 $$
 
-At $\tau=t$ the initial triangle is reduced, and near $\tau=0$ its
-Vieta moves strictly increase the replaced traces. Thus outward
-insertions use the larger root at $\tau=t$ and near $\tau=0$
-by Proposition~\ref{prop:markoff-reduction}. Let $u_1,v_1$ be parents
-of heights $m,n$ and put $H=m+n$. Subtracting the tangent line in
+Let $u_1,v_1$ be parents of heights $m,n$ and put $H=m+n$.
+Subtracting the tangent line in
 $L_{u_1+v_1}=L_{u_1}+L_{v_1}-\delta$ and using convexity of $\delta$
 gives
 $$
@@ -2988,7 +3053,7 @@ $R_{u_1+v_1}\leq(27/10)H^2p_2$, proving
 \eqref{eq:length-tangent-remainder}.
 
 Fix parents $u_1,v_1$ of heights $m,n$ with $H=m+n\geq7$.
-At $\tau=t$ and near $\tau=0$, the same larger-root choice gives
+Along the segment, \eqref{eq:child-length} gives
 $S_{X(\tau)}(u_1,v_1)=\mathcal D(L_{u_1}(\tau),L_{v_1}(\tau))$.
 
 Evaluate $\mathcal D_1,\mathcal D_2$ at the modular parent lengths.
