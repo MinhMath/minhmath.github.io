@@ -301,7 +301,8 @@ The triple satisfies
 x^2+y^2+z^2=xyz,\qquad 
 2<x\leq y\leq z\leq\frac{xy}{2}. 
 \end{equation}
-These coordinates are illustrated in Figure~\ref{fig:area-comparison-domains}. For a reduced triple, set
+Figure~\ref{fig:area-comparison}(a) shows the reduced region.
+For a reduced triple, set
 \begin{equation}\label{eq:p_2}
 p_2=\frac13\left(
 \log^2\frac{x}{y}+\log^2\frac{y}{z}+\log^2\frac{z}{x}\right).
@@ -338,10 +339,33 @@ above and below by positive constant multiples of
 $1/(s_X|\log s_X|)$ as $s_X\to0$.
 Our expansion \eqref{eq:Expansion} determines the leading constant and the first
 correction term.
+
+\subsection{Proof strategy} We approximate the stable-norm unit ball by a finite Farey polygon.
+For each surface $X$, choose a reduced trace triple $(x,y,z)$ and
+an ordered integral basis $\alpha,\beta$ realizing it, so that
+$x,y,z$ are the traces of $\alpha,\beta,\alpha+\beta$. In each of the three sectors between consecutive
+classes
+$$
+\alpha,\qquad \alpha+\beta,\qquad \beta,\qquad -\alpha,
+$$
+write $w=pu_0+qv_0$, where $u_0,v_0$ are the sector endpoints and $p,q\geq0$, and
+define the \emph{sector height} by $h(w)=p+q$.
+Let $P_6(X)$ be the centrally symmetric inscribed polygon whose vertices
+are the normalized primitive classes
+$
+w/\|w\|_X
+$
+of sector height at most six, together with their negatives
+(Figure~\ref{fig:area-comparison}(b) shows the modular example), and set
+$$
+\A_6(X)=\Area(P_6(X)).
+$$
 \begin{figure}[ht]
 \centering
+\begin{minipage}[b]{0.48\textwidth}
+\centering
 \begin{tikzpicture}[
-  x=4.4cm,y=4.4cm,
+  x=5.5cm,y=2.9cm,
   line cap=round,line join=round,
   font=\small
 ]
@@ -398,34 +422,12 @@ correction term.
 \fill (3,3) circle[radius=0.8pt];
 \node[anchor=west,inner sep=2pt] at (3.015,2.975) {$(3,3)$};
 \end{tikzpicture}
-\caption{Reduced trace coordinates with $\sys(X)<7/5$ left of the
-dashed line and $\sys(X)\geq7/5$ on or to its right.
-At the cusp, $y\to+\infty$ as $x\to2^+$.}
-\label{fig:area-comparison-domains}
-\end{figure}
-\subsection{Proof strategy} We approximate the stable-norm unit ball by a finite Farey polygon.
-For each surface $X$, choose a reduced trace triple $(x,y,z)$ and
-an ordered integral basis $\alpha,\beta$ realizing it, so that
-$x,y,z$ are the traces of $\alpha,\beta,\alpha+\beta$. In each of the three sectors between consecutive
-classes
-$$
-\alpha,\qquad \alpha+\beta,\qquad \beta,\qquad -\alpha,
-$$
-write $w=pu_0+qv_0$, where $u_0,v_0$ are the sector endpoints and $p,q\geq0$, and
-define the \emph{sector height} by $h(w)=p+q$.
-Let $P_6(X)$ be the centrally symmetric inscribed polygon whose vertices
-are the normalized primitive classes
-$
-w/\|w\|_X
-$
-of sector height at most six, together with their negatives
-(see Figure~\ref{fig:farey-p6}), and set
-$$
-\A_6(X)=\Area(P_6(X)).
-$$
-\begin{figure}[ht]
+\par\small (a)
+\end{minipage}%
+\hfill
+\begin{minipage}[b]{0.48\textwidth}
 \centering
-\begin{tikzpicture}[scale=4]
+\begin{tikzpicture}[scale=4.4,font=\small]
 
 \def\fareyplot{
 (0.519522,0.000000)
@@ -576,11 +578,14 @@ $$
 \node[above left] at (0,0.519522) {$\beta$};
 \node[above left] at (-0.519522,0) {$-\alpha$};
 
-\node at (-0.01,-0.1) {$P_6(X_{\mathrm{mod}})$};
-
 \end{tikzpicture}
-\caption{The Farey polygon $P_6(X_{\mathrm{mod}})$.}
-\label{fig:farey-p6}
+\par\small (b)
+\end{minipage}
+\caption{(a) Reduced trace coordinates. The dashed line marks
+$\sys(X)=7/5$, and the cusp has $y\to+\infty$ as $x\to2^+$.
+(b) The Farey polygon $P_6(\Xmod)$ used in the area comparison
+for $\sys(X)\geq7/5$.}
+\label{fig:area-comparison}
 \end{figure}
 The polygon $P_6$ is small enough for an explicit comparison and
 approximates the norm ball closely enough to control the omitted
@@ -625,9 +630,8 @@ for nonmodular $X$ in an explicit neighborhood
 (Proposition~\ref{prop:uniform-p6}).
 With further Taylor coefficients, the same average bound extends
 the polygon comparison beyond this neighborhood.
-We combine these polygon estimates with bounds for the omitted
-area in two regions
-(Figure~\ref{fig:area-comparison-domains}).
+The systole cutoff separates the two comparisons
+(Figure~\ref{fig:area-comparison}(a)).
 \begin{itemize}
 \item
 For a nonmodular torus with $\sys(X)\geq7/5$, the polygon area
@@ -1091,7 +1095,7 @@ z_+(x,y)=z_-(x,y)=\frac{xy}{2}.
 $$
 A positive Markoff triple $(x,y,z)$ is \emph{reduced} if
 $$2<x\leq y\leq z\leq\frac{xy}{2},$$
-see the left panel of Figure~\ref{fig:area-comparison-domains}. Thus, for a
+as illustrated in Figure~\ref{fig:area-comparison}(a). Thus, for a
 reduced triple,
 $$
 z=z_-(x,y).
@@ -1205,8 +1209,8 @@ most $K$, together with their negatives, and set
 $$
 \A_K(X)=\Area(P_K(X)).
 $$
-For a reduced triple, this is the polygon used in the introduction
-(see Figure~\ref{fig:farey-p6}). In the local family, the sectors
+For $K=6$ and a reduced triple, this is the polygon used in the
+introduction (Figure~\ref{fig:area-comparison}(b)). In the local family, the sectors
 and heights are fixed; only the geodesic lengths used to normalize
 the vertices vary. Thus the same construction defines $\A_K$ for
 the nearby triples used in the local estimates.
@@ -2026,7 +2030,7 @@ $$
 \endgroup
 
 \caption{The upper half of $P_6(\Xmod)$ in the basis
-$(\alpha,\beta)$ of Figure~\ref{fig:farey-p6}.
+$(\alpha,\beta)$ of Figure~\ref{fig:area-comparison}(b).
 Each numbered group contains six consecutive pairs, with
 permutations $(x,y,z)$, $(z,y,x)$, $(z,x,y)$, $(y,x,z)$,
 $(y,z,x)$, and $(x,z,y)$ for groups $1$-$6$, respectively.}
