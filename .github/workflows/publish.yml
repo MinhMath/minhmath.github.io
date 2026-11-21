@@ -47,13 +47,15 @@ jobs:
         uses: actions/cache/restore@v4
         with:
           path: .manuscript-pdf
-          key: manuscript-pdf-v1-${{ runner.os }}-${{ steps.manuscript.outputs.commit }}
-          restore-keys: manuscript-pdf-v1-${{ runner.os }}-
+          key: manuscript-pdf-v2-${{ runner.os }}-${{ steps.manuscript.outputs.commit }}
+          restore-keys: |
+            manuscript-pdf-v2-${{ runner.os }}-
+            manuscript-pdf-v1-${{ runner.os }}-
       - name: Install LaTeX
         if: steps.manuscript_pdfs.outputs.cache-hit != 'true'
         run: |
           sudo apt-get update
-          sudo apt-get install -y --no-install-recommends texlive-latex-extra texlive-pictures texlive-fonts-recommended lmodern
+          sudo apt-get install -y --no-install-recommends latexdiff texlive-latex-extra texlive-pictures texlive-fonts-recommended lmodern
       - name: Build manuscript archive
         id: manuscript_archive
         run: python scripts/build_manuscript.py
