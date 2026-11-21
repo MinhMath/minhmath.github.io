@@ -1753,13 +1753,9 @@ Both functions are positive and symmetric.
 -- (axis cs:0.329080436069,5)
 -- cycle;
 
-\addplot[gray!65, densely dashed, domain=0:5] {x};
-
 \addplot[black, thick, domain=0.329080436069:5]
 {2*ln((exp(x/2)+1)/(exp(x/2)-1))};
 
-\addplot[black!55, dashed]
-coordinates {(1.609437912,\Lv) (5,\Lv)};
 \addplot[only marks, mark=*, mark size=1.3pt]
 coordinates {(1.609437912,\Lv)};
 
@@ -1814,9 +1810,10 @@ at (axis cs:3.0,3.8)
 \end{tikzpicture}
 \par\small (b)
 \end{minipage}
-\caption{(a) The admissible region $\mathcal E$ with the dashed horizontal slice
-$L_v=2\arccosh(3/2)$. (b) The set $\{G\geq0\}$ on that slice.
-Its lower boundary gives $\log\delta$, and the two roots coincide at $P$.}
+\caption{(a) The admissible region $\mathcal E$, with the parent lengths
+at $P$ marked by the upper dot. (b) The set $\{G\geq0\}$ at
+$L_v=2\arccosh(3/2)$. Its lower boundary gives $\log\delta$, and the
+roots coincide at $P$.}
 \label{fig:deficit-domains}
 \end{figure}
 
