@@ -61,6 +61,20 @@
   ],
   "talks": [
     {
+      "text": "Perspectives in Teichmüller Theory, IMS, National University of Singapore, Singapore (upcoming)",
+      "link_text": "Perspectives in Teichmüller Theory",
+      "date": "26 Jul - 6 Aug 2027",
+      "url": "https://ims.nus.edu.sg/events/teichmuellertheory/",
+      "number": 30
+    },
+    {
+      "text": "Vietnam–Korea Joint Meeting on Algebra, Geometry and Topology, Nha Trang, Vietnam (upcoming)",
+      "link_text": "Vietnam–Korea Joint Meeting on Algebra, Geometry and Topology",
+      "date": "18-22 Jan 2027",
+      "url": "https://math.ac.vn/conference/vietnam-korea-joint-meeting-on-algebra-geometry-and-topology",
+      "number": 29
+    },
+    {
       "number": 28,
       "text": "McShane birthday conference, Hebei Normal University, China",
       "date": "Aug-Sep 2026",
@@ -350,19 +364,5 @@
       "email": "mattansp@nus.edu.sg"
     }
   ],
-  "hobbies": "Table tennis, badminton, hiking",
-  "upcoming_talks": [
-    {
-      "text": "Talk, Perspectives in Teichmüller Theory, IMS, National University of Singapore, Singapore (upcoming)",
-      "link_text": "Perspectives in Teichmüller Theory",
-      "date": "26 Jul - 6 Aug 2027",
-      "url": "https://ims.nus.edu.sg/events/teichmuellertheory/"
-    },
-    {
-      "text": "Invited talk, Vietnam–Korea Joint Meeting on Algebra, Geometry and Topology, Nha Trang, Vietnam (upcoming)",
-      "link_text": "Vietnam–Korea Joint Meeting on Algebra, Geometry and Topology",
-      "date": "18-22 Jan 2027",
-      "url": "https://math.ac.vn/conference/vietnam-korea-joint-meeting-on-algebra-geometry-and-topology"
-    }
-  ]
+  "hobbies": "Table tennis, badminton, hiking"
 }

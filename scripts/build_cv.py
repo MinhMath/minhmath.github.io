@@ -87,7 +87,6 @@ entries('Education',DETAILS['education'])
 entries('Academic positions',DETAILS['positions'])
 for section,label in [('papers','Papers'),('other','Other writings')]:
  papers=sorted((p for p in PAPERS if p['section']==section),key=lambda p:p['display_number'],reverse=section=='papers')
- row(label,'','First online')
  for i,p in enumerate(papers):
   title=p.get('display_title',p['title'])
   coauthors=[author for author in p['authors'] if author!='Nhat Minh Doan']
@@ -96,10 +95,9 @@ for section,label in [('papers','Papers'),('other','Other writings')]:
   text+='<br/>'+e(p['venue'])
   if p.get('arxiv') and p.get('doi'):text+=' '+a('https://arxiv.org/abs/'+p['arxiv'],'arXiv:'+p['arxiv'])
   first_online=date.fromisoformat(p['first_online'])
-  row('',text,f'{first_online.day} {first_online:%b %Y}')
+  row(label if i==0 else '',text,f'{first_online.day} {first_online:%b %Y}')
  gap()
 row('Referee work',e('; '.join(DETAILS['referee_work']))+'.',wide=True);gap()
-entries('Upcoming talks',DETAILS['upcoming_talks'])
 entries('Talks',DETAILS['talks'])
 entries('Services',DETAILS['services'])
 entries('Advising',DETAILS['advising'])
