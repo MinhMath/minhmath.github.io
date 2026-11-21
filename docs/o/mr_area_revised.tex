@@ -1016,8 +1016,8 @@ Appendix~\ref{sec:cusp-growth} proves the cusp expansion.
 \paragraph{Acknowledgements and declaration of AI use.} We thank Greg McShane and Igor Rivin for their influential work.
 The ideas of subdividing the reduced region and estimating area
 changes along lines through the modular point
-(Subsections~\ref{sec:taylor-expansion} and
-\ref{sec:omitted-area}) arose in part from discussions
+(Sections~\ref{sec:shared-estimates} and
+\ref{sec:large-systole}) arose in part from discussions
 with Ser Peow Tan during the last-named author's visit to the
 National University of Singapore in May 2026.
 The last-named author thanks him for these helpful discussions and for
@@ -2933,70 +2933,44 @@ $L(\tau)$ satisfies
 \label{eq:length-tangent-remainder}
 L(t)-L(0)-tL'(0)\leq\frac{27}{10}h^2p_2.
 \end{equation}
-For the general shear-coordinate trace formula, see
-\cite[Lemma~3, page~1575]{BonahonWong2011}. In the sector with
-endpoint traces $x,y$, set
-$$
-A=\begin{pmatrix}
-e^{v-w}&e^{v-w}\\
-e^{3u}&e^{3u}+e^{w-v}
-\end{pmatrix},
-B=\begin{pmatrix}
-e^{3v}+e^{w-u}&e^{3v}\\
-e^{u-w}&e^{u-w}
-\end{pmatrix}.
-$$
-Both matrices have determinant one, and
-\eqref{eq:shape-trace-parametrization} gives $\tr A=x$ and $\tr B=y$.
-Direct multiplication gives
-$$
-\tr(AB^{-1})=e^{2u+w}+e^{2v+w}+e^{3w}=z.
-$$
-Suppose the matrices $U,V$ for neighboring
-classes $u_1,v_1$ satisfy $\tr(UV^{-1})=x_{u_1-v_1}$. We assign $UV$
-to $u_1+v_1$ as in the Farey recursion
-\cite[equation~(4.7), page~317]{Parkkonen1999}.
-The identity $\tr(UV)=\tr(U)\tr(V)-\tr(UV^{-1})$ gives the trace
-in \eqref{eq:vieta}. For the new pairs $(U,UV)$ and $(UV,V)$,
-the traces of the differences are $\tr(V)$ and $\tr(U)$, since
-$\tr(U(UV)^{-1})=\tr(V)$ and $\tr((UV)V^{-1})=\tr(U)$.
-The two initial classes have height one and the heights add at each
-step, so a class of height $h$ has the trace of a product of $h$
-factors from $\{A,B\}$. Permuting the coordinates gives the other
-sectors.
+For a class $w$, put $R_w=L_w(t)-L_w(0)-tL_w'(0)$.
+At height one, the trace is, up to permutation,
+$e^{3a\tau}+e^{(b-c)\tau}+e^{(c-b)\tau}$ by
+\eqref{eq:shape-trace-parametrization}. The exponential rates lie in
+an interval of width at most $2\sqrt{2p_2}/t$, since their differences
+are twice coordinate differences of $a,b,c$, up to sign. The second
+derivative of the log trace is the variance of these rates with
+weights proportional to the exponential terms. It is therefore
+at most $2p_2/t^2$, and Taylor's formula \eqref{eq:taylor-segment}
+bounds the log-trace remainder by $p_2$. Since $s\mapsto2\arccosh(e^s/2)$ is increasing
+and concave with derivative $6/\sqrt5$ at $s=\log3$, we obtain
+$R_w\leq(6/\sqrt5)p_2<(27/10)p_2$.
 
-Along $X(\tau)$, the exponents in $A$ have slopes $b-c$, $c-b$,
-and $3a$. Their pairwise differences are twice differences of
-$a,b,c$ up to sign, and the same holds for $B$. Since each of
-$|u-v|,|v-w|,|w-u|$ is at most $\sqrt{2p_2}$, the slopes in each
-matrix lie in an interval of width at most $2\sqrt{2p_2}/t$.
-The trace is a positive sum of exponentials whose slopes add one
-slope from each factor, so their interval has width at most
-$2h\sqrt{2p_2}/t$.
+At $\tau=t$ the initial triangle is reduced, and near $\tau=0$ its
+Vieta moves strictly increase the replaced traces. Thus outward
+insertions use the larger root at $\tau=t$ and near $\tau=0$
+by Proposition~\ref{prop:markoff-reduction}. Let $u_1,v_1$ be parents
+of heights $m,n$ and put $H=m+n$. Subtracting the tangent line in
+$L_{u_1+v_1}=L_{u_1}+L_{v_1}-\delta$ and using convexity of $\delta$
+gives
+$$
+R_{u_1+v_1}\leq(1-\delta_1)R_{u_1}+(1-\delta_2)R_{v_1},
+$$
+with the derivatives evaluated at the modular parent lengths.
 
-Let $s(\tau)$ be the logarithm of this trace. Its second derivative
-is the variance of the slopes with weights proportional to the
-exponential terms. Measuring squared deviations from the midpoint
-of the interval gives $s''(\tau)\leq 2h^2p_2/t^2$. Taylor's formula
-\eqref{eq:taylor-segment} now gives $s(t)-s(0)-ts'(0)\leq h^2p_2$.
-By concavity of
-$s\mapsto2\arccosh(e^s/2)$ and the chain rule,
-$$
-L(t)-L(0)-tL'(0)
-\leq
-\frac{2e^{s(0)}}{\sqrt{e^{2s(0)}-4}}
-\bigl(s(t)-s(0)-ts'(0)\bigr).
-$$
-Since $e^{s(0)}\geq3$, the prefactor is at most
-$6/\sqrt5<27/10$. This proves \eqref{eq:length-tangent-remainder}.
+Both coefficients are positive and at most $H/(H-1)$.
+For $H=2$, differentiating \eqref{eq:2trace} at the modular traces
+$(3,3,6)$ gives $1-\delta_i=4\sqrt5/\sqrt{32}<2$.
+For $H\geq3$, one parent has height at least two, so
+\eqref{eq:modular-height-bound} and Proposition~\ref{prop:scalar-defect}
+give $-\delta_i<20(43/250)^H<1/(H-1)$.
+Since $m^2+n^2\leq H(H-1)$, induction gives
+$R_{u_1+v_1}\leq(27/10)H^2p_2$, proving
+\eqref{eq:length-tangent-remainder}.
 
 Fix parents $u_1,v_1$ of heights $m,n$ with $H=m+n\geq7$.
-The initial triangle is reduced at $\tau=t$. Its Vieta moves
-strictly increase the replaced traces near $\tau=0$, since at
-$\tau=0$ they replace $3$ by $6$. Thus the added area is
-$\mathcal D(L_{u_1}(\tau),L_{v_1}(\tau))$ at $\tau=t$ and near $\tau=0$
-by Proposition~\ref{prop:markoff-reduction} and the larger-root formula
-in Subsection~\ref{sec:local}.
+At $\tau=t$ and near $\tau=0$, the same larger-root choice gives
+$S_{X(\tau)}(u_1,v_1)=\mathcal D(L_{u_1}(\tau),L_{v_1}(\tau))$.
 
 Evaluate $\mathcal D_1,\mathcal D_2$ at the modular parent lengths.
 Proposition~\ref{prop:scalar-defect} applies there because both
