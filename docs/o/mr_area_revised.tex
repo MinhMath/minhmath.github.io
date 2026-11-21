@@ -1170,7 +1170,7 @@ Proposition~\ref{prop:markoff-reduction}. We use it as the initial
 triangle; this choice may depend on $X$.
 
 When varying the trace triple near the modular point, we keep the
-initial triangle fixed. On a neighborhood of $(3,3,3)$, its three
+initial triangle fixed. In a neighborhood of $(3,3,3)$, its three
 Vieta moves strictly increase the traces they replace. The curves
 and sector heights are therefore fixed in these local coordinates.
 A move away from the initial triangle is called an
@@ -2922,13 +2922,16 @@ $$
 \end{proposition}
 
 \begin{proof}
-Let $X(r)$ have logarithmic coordinates $(ru,rv,rw)$ with the
-initial triangle fixed, so $X(0)=\Xmod$ and $X(1)=X$.
+Let $t=\max\{|u|,|v|,|w|\}$ as in \eqref{eq:t}.
+If $t=0$, then both sides are zero. For $t>0$, write
+$(u,v,w)=t(a,b,c)$ and let $X(\tau)$ have logarithmic coordinates
+$\tau(a,b,c)$ with the initial Farey triangle fixed. Thus
+$X(0)=\Xmod$ and $X(t)=X$.
 For a class of sector height $h$, we first show that its length
-$L(r)$ satisfies
+$L(\tau)$ satisfies
 \begin{equation}
 \label{eq:length-tangent-remainder}
-L(1)-L(0)-L'(0)\leq\frac{27}{10}h^2p_2.
+L(t)-L(0)-tL'(0)\leq\frac{27}{10}h^2p_2.
 \end{equation}
 In the sector with endpoint traces $x,y$, take the following
 determinant-one matrices from the classical shear-coordinate
@@ -2957,36 +2960,36 @@ step, so a class of height $h$ has the trace of a product of $h$
 factors from $\{A,B\}$. Permuting the coordinates gives the other
 sectors.
 
-Under $(u,v,w)\mapsto(ru,rv,rw)$, the slopes of the exponents
-in $A$ are $v-w$, $w-v$, and $3u$. Their pairwise differences
-are twice differences of coordinates, and the same holds for $B$
-by exchanging $u$ and $v$. Each coordinate difference has
-absolute value at most $\sqrt{2p_2}$. The trace is a positive
-sum of exponentials, with slopes obtained by adding one slope
-from each factor. These sums lie in an interval of width
-at most $2h\sqrt{2p_2}$.
+Along $X(\tau)$, the exponents in $A$ have slopes $b-c$, $c-b$,
+and $3a$. Their pairwise differences are twice differences of
+$a,b,c$ up to sign, and the same holds for $B$. Since each of
+$|u-v|,|v-w|,|w-u|$ is at most $\sqrt{2p_2}$, the slopes in each
+matrix lie in an interval of width at most $2\sqrt{2p_2}/t$.
+The trace is a positive sum of exponentials whose slopes add one
+slope from each factor, so their interval has width at most
+$2h\sqrt{2p_2}/t$.
 
-Let $s(r)$ be the logarithm of this trace. Its second derivative is
-the variance of the slopes with weights proportional to the
-corresponding exponential terms. Measuring squared deviations
-from the midpoint of the interval bounds this variance by
-$2h^2p_2$. Taylor's formula \eqref{eq:taylor-segment} gives
-$s(1)-s(0)-s'(0)\leq h^2p_2$. By concavity of
+Let $s(\tau)$ be the logarithm of this trace. Its second derivative
+is the variance of the slopes with weights proportional to the
+exponential terms. Measuring squared deviations from the midpoint
+of the interval gives $s''(\tau)\leq 2h^2p_2/t^2$. Taylor's formula
+\eqref{eq:taylor-segment} now gives $s(t)-s(0)-ts'(0)\leq h^2p_2$.
+By concavity of
 $s\mapsto2\arccosh(e^s/2)$ and the chain rule,
 $$
-L(1)-L(0)-L'(0)
+L(t)-L(0)-tL'(0)
 \leq
 \frac{2e^{s(0)}}{\sqrt{e^{2s(0)}-4}}
-\bigl(s(1)-s(0)-s'(0)\bigr).
+\bigl(s(t)-s(0)-ts'(0)\bigr).
 $$
 Since $e^{s(0)}\geq3$, the prefactor is at most
 $6/\sqrt5<27/10$. This proves \eqref{eq:length-tangent-remainder}.
 
 Fix parents $u_1,v_1$ of heights $m,n$ with $H=m+n\geq7$.
-The initial triangle is reduced at $r=1$. Near $r=0$, each Vieta
-move from that triangle strictly increases the replaced trace,
-since at $r=0$ it replaces $3$ by $6$. Thus the added area is
-$\mathcal D(L_{u_1}(r),L_{v_1}(r))$ at $r=1$ and near $r=0$
+The initial triangle is reduced at $\tau=t$. Its Vieta moves
+strictly increase the replaced traces near $\tau=0$, since at
+$\tau=0$ they replace $3$ by $6$. Thus the added area is
+$\mathcal D(L_{u_1}(\tau),L_{v_1}(\tau))$ at $\tau=t$ and near $\tau=0$
 by Proposition~\ref{prop:markoff-reduction} and the larger-root formula
 in Subsection~\ref{sec:local}.
 
@@ -2999,16 +3002,16 @@ $\delta_i<0$ and $\partial_i L_{u_1+v_1}=1-\delta_i>0$, so
 $\mathcal D_i<0$.
 
 By convexity of $\mathcal D$ (Proposition~\ref{prop:defect-convexity})
-and the chain rule, subtracting the derivative at $r=0$ gives the
-first inequality below. The second uses $\mathcal D_i<0$ and
+and the chain rule, subtracting the linear term at $\tau=0$ gives
+the first inequality below. The second uses $\mathcal D_i<0$ and
 \eqref{eq:length-tangent-remainder}.
 $$
 \begin{aligned}
 &S_X(u_1,v_1)-S_{\Xmod}(u_1,v_1)
--\left.\frac{d}{dr}S_{X(r)}(u_1,v_1)\right|_{r=0}\\
+-t\left.\frac{d}{d\tau}S_{X(\tau)}(u_1,v_1)\right|_{\tau=0}\\
 &\geq
-\mathcal D_1\bigl(L_{u_1}(1)-L_{u_1}(0)-L_{u_1}'(0)\bigr)
-+\mathcal D_2\bigl(L_{v_1}(1)-L_{v_1}(0)-L_{v_1}'(0)\bigr)\\
+\mathcal D_1\bigl(L_{u_1}(t)-L_{u_1}(0)-tL_{u_1}'(0)\bigr)
++\mathcal D_2\bigl(L_{v_1}(t)-L_{v_1}(0)-tL_{v_1}'(0)\bigr)\\
 &\geq
 -\frac{27}{10}p_2
 \left(m^2|\mathcal D_1|+n^2|\mathcal D_2|\right).
@@ -3025,8 +3028,8 @@ After factoring out $e^{-L_{u_1}-L_{v_1}}/(L_{u_1}L_{v_1}L_{u_1+v_1})$,
 the three terms are bounded in sum by $20+44/7+176/147<28$
 by \eqref{eq:modular-height-bound}.
 
-For every integer $K>6$, the derivative terms through height $K$
-sum to the derivative of $(\A_K-\A_6)(X(r))$ at $r=0$.
+For every integer $K>6$, the linear terms through height $K$ sum
+to $t$ times the derivative of $(\A_K-\A_6)(X(\tau))$ at $\tau=0$.
 The finite polygon areas are analytic in the traces near the modular
 point by \eqref{eq:vieta} and the length formula, and cyclic symmetry
 makes this derivative zero by Lemma~\ref{lem:symmetry-at-modular}.
@@ -3038,7 +3041,6 @@ $$
 $$
 when $p_2>0$. At $q=43/250$, the series is $q^7(6-5q)/(1-q)^2$.
 Letting $K\to\infty$ proves the proposition by \eqref{eq:farey-tail}.
-At the modular torus both sides are zero.
 \end{proof}
 
 \subsection{Completing the comparison}
