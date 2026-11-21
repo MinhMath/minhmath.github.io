@@ -7,6 +7,7 @@ The publication list is shared with the personal website.
 from pathlib import Path
 from html import escape
 import json
+from datetime import date
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.lib import colors
@@ -24,9 +25,9 @@ for name,file in [('CV','LiberationSerif-Regular.ttf'),('CV-Bold','LiberationSer
  pdfmetrics.registerFont(TTFont(name,str(FONT_DIR/file)))
 pdfmetrics.registerFontFamily('CV',normal='CV',bold='CV-Bold',italic='CV-Italic',boldItalic='CV-Bold')
 INK=colors.HexColor('#171717');LINK=colors.HexColor('#10417e')
-BODY=ParagraphStyle('Body',fontName='CV',fontSize=10.7,leading=12.9,textColor=INK,spaceAfter=0)
-LABEL=ParagraphStyle('Label',parent=BODY,fontName='CV-Bold',fontSize=10.7,leading=12.9)
-DATE=ParagraphStyle('Date',parent=BODY,alignment=TA_RIGHT,fontSize=10.2,leading=12.9)
+BODY=ParagraphStyle('Body',fontName='CV',fontSize=10.7,leading=12.5,textColor=INK,spaceAfter=0)
+LABEL=ParagraphStyle('Label',parent=BODY,fontName='CV-Bold',fontSize=10.7,leading=12.5)
+DATE=ParagraphStyle('Date',parent=BODY,alignment=TA_RIGHT,fontSize=10.2,leading=12.5)
 TITLE=ParagraphStyle('Title',parent=BODY,fontName='CV-Bold',fontSize=14.5,alignment=TA_CENTER,leading=19,spaceAfter=12)
 FOOT=ParagraphStyle('Foot',parent=BODY,fontSize=8,leading=10,textColor=colors.HexColor('#666666'))
 WIDTH=528
@@ -86,6 +87,7 @@ entries('Education',DETAILS['education'])
 entries('Academic positions',DETAILS['positions'])
 for section,label in [('papers','Papers'),('other','Other writings')]:
  papers=sorted((p for p in PAPERS if p['section']==section),key=lambda p:p['display_number'],reverse=section=='papers')
+ row(label,'','First online')
  for i,p in enumerate(papers):
   title=p.get('display_title',p['title'])
   coauthors=[author for author in p['authors'] if author!='Nhat Minh Doan']
@@ -93,9 +95,11 @@ for section,label in [('papers','Papers'),('other','Other writings')]:
   if coauthors:text+='<br/>(with '+e(', '.join(coauthors[:-1])+' and '+coauthors[-1] if len(coauthors)>1 else coauthors[0])+')'
   text+='<br/>'+e(p['venue'])
   if p.get('arxiv') and p.get('doi'):text+=' '+a('https://arxiv.org/abs/'+p['arxiv'],'arXiv:'+p['arxiv'])
-  row(label if i==0 else '',text,str(p['year']))
+  first_online=date.fromisoformat(p['first_online'])
+  row('',text,f'{first_online.day} {first_online:%b %Y}')
  gap()
 row('Referee work',e('; '.join(DETAILS['referee_work']))+'.',wide=True);gap()
+entries('Upcoming talks',DETAILS['upcoming_talks'])
 entries('Talks',DETAILS['talks'])
 entries('Services',DETAILS['services'])
 entries('Advising',DETAILS['advising'])
@@ -112,7 +116,7 @@ gap(3)
 row('Hobbies',e(DETAILS['hobbies']),wide=True)
 
 table=LongTable(ROWS,colWidths=[LABEL_WIDTH,TEXT_WIDTH,DATE_WIDTH],hAlign='LEFT',splitByRow=1)
-table.setStyle(TableStyle([('VALIGN',(0,0),(-1,-1),'TOP'),('LEFTPADDING',(0,0),(-1,-1),0),('RIGHTPADDING',(0,0),(0,-1),12),('RIGHTPADDING',(1,0),(1,-1),10),('RIGHTPADDING',(2,0),(2,-1),0),('TOPPADDING',(0,0),(-1,-1),0),('BOTTOMPADDING',(0,0),(-1,-1),3)]+SPANS))
+table.setStyle(TableStyle([('VALIGN',(0,0),(-1,-1),'TOP'),('LEFTPADDING',(0,0),(-1,-1),0),('RIGHTPADDING',(0,0),(0,-1),12),('RIGHTPADDING',(1,0),(1,-1),10),('RIGHTPADDING',(2,0),(2,-1),0),('TOPPADDING',(0,0),(-1,-1),0),('BOTTOMPADDING',(0,0),(-1,-1),2)]+SPANS))
 doc=SimpleDocTemplate(str(DEST),pagesize=letter,rightMargin=42,leftMargin=42,topMargin=36,bottomMargin=42,title='Curriculum vitae - Nhat Minh Doan',author='Nhat Minh Doan',subject='Updated publications and academic activities, '+DETAILS['updated'])
 story=[para('Nhat Minh Doan (Đoàn Nhật Minh)',TITLE),Table([['']],colWidths=[WIDTH],style=TableStyle([('LINEBELOW',(0,0),(-1,-1),0.8,INK),('TOPPADDING',(0,0),(-1,-1),0),('BOTTOMPADDING',(0,0),(-1,-1),0)])),Spacer(1,13),table]
 doc.build(story,onFirstPage=footer,onLaterPages=footer)

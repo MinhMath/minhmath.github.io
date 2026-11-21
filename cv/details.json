@@ -1,6 +1,6 @@
 {
-  "updated": "10 November 2026",
-  "source_note": "Retained biographical and service information from the author’s public CV of 25 June 2026. Publications use docs/papers.json checked 8 November 2026. Hebei talk title and event verified against the organiser’s programme; the user confirmed the talk in the update request.",
+  "updated": "21 November 2026",
+  "source_note": "Retained biographical and service information from the author’s public CV of 25 June 2026. Publications use docs/papers.json checked 8 November 2026. Hebei talk title and event verified against the organiser’s programme; the user confirmed the talk in the update request. Updated 21 November 2026: upcoming Singapore and Nha Trang talks confirmed by the author; event dates from the organisers. Paper dates use the catalogue first_online field, including preprints.",
   "education": [
     {
       "title": "PhD in Mathematics",
@@ -350,5 +350,19 @@
       "email": "mattansp@nus.edu.sg"
     }
   ],
-  "hobbies": "Table tennis, badminton, hiking"
+  "hobbies": "Table tennis, badminton, hiking",
+  "upcoming_talks": [
+    {
+      "text": "Talk, Perspectives in Teichmüller Theory, IMS, National University of Singapore, Singapore (upcoming)",
+      "link_text": "Perspectives in Teichmüller Theory",
+      "date": "26 Jul - 6 Aug 2027",
+      "url": "https://ims.nus.edu.sg/events/teichmuellertheory/"
+    },
+    {
+      "text": "Invited talk, Vietnam–Korea Joint Meeting on Algebra, Geometry and Topology, Nha Trang, Vietnam (upcoming)",
+      "link_text": "Vietnam–Korea Joint Meeting on Algebra, Geometry and Topology",
+      "date": "18-22 Jan 2027",
+      "url": "https://math.ac.vn/conference/vietnam-korea-joint-meeting-on-algebra-geometry-and-topology"
+    }
+  ]
 }

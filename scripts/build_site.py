@@ -158,7 +158,8 @@ def papers_embed():
 
 def meetings_panel():
  meetings=[
-  ('26 July–6 August 2027', 'Singapore', 'Perspectives in Teichmüller Theory, IMS–NUS (upcoming)', 'https://ims.nus.edu.sg/events/teichmuellertheory/'),
+  ('26 July–6 August 2027', 'Singapore', 'Talk, Perspectives in Teichmüller Theory, IMS–NUS (upcoming)', 'https://ims.nus.edu.sg/events/teichmuellertheory/'),
+  ('18–22 January 2027', 'Nha Trang, Vietnam', 'Invited talk, Vietnam–Korea Joint Meeting on Algebra, Geometry and Topology (upcoming)', 'https://math.ac.vn/conference/vietnam-korea-joint-meeting-on-algebra-geometry-and-topology'),
   ('August–September 2026', 'Shijiazhuang, China', 'Hyperbolic 2026 at Hebei Normal University', 'https://ahdoc.github.io/hyperbolic2026shijiazhuang/abstract'),
   ('July–August 2026', 'Jeju, South Korea', '2K-GATE Conference III', 'https://sites.google.com/view/2k-gate-workshop-3/home'),
   ('June 2026', 'Hanoi, Vietnam', 'Seminar, Thang Long Institute of Mathematics and Applied Sciences', None),
