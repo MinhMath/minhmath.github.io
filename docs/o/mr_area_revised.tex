@@ -604,10 +604,20 @@ with $\sys(X)\geq7/5$, we show that the polygon area increases
 by more than the possible decrease in the omitted area.
 For $\sys(X)<7/5$, we estimate the full area directly.
 
-In the logarithmic coordinates of Section~\ref{sec:coordinates},
-cyclic symmetry makes the linear Taylor term vanish and the quadratic
-term a multiple of $p_2$ (Lemma~\ref{lem:symmetry-at-modular}). This
-applies to both the polygon area $\A_6$ and the omitted area $\A-\A_6$.
+Cyclic symmetry is central to the local comparison.
+The permutation $(x,y,z)\mapsto(y,z,x)$ fixes the modular point.
+For every twice continuously differentiable function invariant under
+this permutation, Lemma~\ref{lem:symmetry-at-modular} gives, in
+local coordinates $(x,y)$,
+$$
+\nabla F(3,3)=0,
+\qquad
+\Hess F(3,3)=\kappa
+\begin{pmatrix}2&1\\1&2\end{pmatrix}.
+$$
+Thus there is no linear term, and the quadratic term is determined
+by one number. This applies to both the polygon area $\A_6$
+and the omitted area $\A-\A_6$.
 
 For the polygon area, a bound for the average squared modulus
 of its complex extension on a circle controls the entire
@@ -1146,30 +1156,6 @@ with trace triple $(x,y,z_-(x,y))$. This function is real analytic
 \cite[Section~3, Corollary~1]{McShaneRivinTori}.
 See also \cite[slide~30]{Bonahon2018}.
 
-For the local calculations, use the centered logarithmic coordinates
-$$
-(u,v,w)=(\log x,\log y,\log z)-\frac{\log(xyz)}{3}(1,1,1).
-$$
-They satisfy $u+v+w=0$ and vanish at the modular point. The Markoff
-equation gives the inverse parametrization
-\begin{equation}
-\label{eq:shape-trace-parametrization}
-(x,y,z)=(e^{2u}+e^{2v}+e^{2w})(e^u,e^v,e^w).
-\end{equation}
-Indeed, substituting $(x,y,z)=(xyz)^{1/3}(e^u,e^v,e^w)$ in
-\eqref{eq:markoff} gives $(xyz)^{1/3}=e^{2u}+e^{2v}+e^{2w}$.
-Conversely, \eqref{eq:shape-trace-parametrization} gives a positive
-Markoff triple for each real triple with $u+v+w=0$, since
-$x=e^{3u}+2\cosh(v-w)>2$, and similarly for $y,z$.
-Permuting the traces simply permutes $u,v,w$, and \eqref{eq:p_2} becomes
-$$
-p_2=u^2+v^2+w^2.
-$$
-These logarithmic coordinates are linearly related to the shear
-coordinates used in \cite{Bonahon2018}. For the general classical
-trace formula in shear coordinates, see
-\cite[Lemma~3, page~1575]{BonahonWong2011}.
-
 \subsection{The exact Farey area expansion}
 \label{sec:farey-area}
 
@@ -1374,42 +1360,242 @@ In particular, $\A_K(3,3)=\A_K(\Xmod)$.
 
 
 
-\subsection{Taylor estimates and cyclic symmetry}
+\subsection{Derivatives and symmetry at the modular point}
 \label{sec:differential-tools}
-
-Let $G$ be twice continuously differentiable on a neighborhood of
-the segment from $q$ to $q+v$. Taylor's theorem
-\cite[Theorem~5.15]{Rudin} gives, for some $\theta\in(0,1)$,
+We recall the gradient and Hessian and explain how cyclic symmetry
+constrains them at the modular point.
+\paragraph{Gradient and Hessian.}
+For a twice continuously differentiable function $G(x,y)$, recall that
+$$
+\nabla G=
+\begin{pmatrix}
+G_x\\
+G_y
+\end{pmatrix},
+\qquad
+\Hess G=
+\begin{pmatrix}
+G_{xx}&G_{xy}\\
+G_{xy}&G_{yy}
+\end{pmatrix}.
+$$
+For a direction $v\in\R^2$, the directional derivative is
+$$
+D_vG=\nabla G\cdot v.
+$$
+Thus $\nabla G=0$ means that $G$ has zero first-order slope in every
+direction. Suppose the segment $q+sv$, $0\leq s\leq1$, lies in the
+domain of $G$. Applying Taylor's theorem \cite[Theorem~5.15]{Rudin}
+to $s\mapsto G(q+sv)$ gives, for some $\theta\in(0,1)$,
 \begin{equation}
 \label{eq:taylor-segment}
-G(q+v)-G(q)=\nabla G(q)\cdot v+\frac12 v^{\mathsf T}\Hess G(q+\theta v)v.
+G(q+v)-G(q)
+=\nabla G(q)\cdot v+\frac12v^{\mathsf T}\Hess G(q+\theta v)v.
 \end{equation}
+By continuity of the Hessian, as $v\to0$ we have
+\begin{equation}
+\label{eq:taylor-quadratic}
+G(q+v)-G(q)
+=\nabla G(q)\cdot v+\frac12v^{\mathsf T}\Hess G(q)v+o(|v|^2).
+\end{equation}
+The notation $\Hess G(q)\geq0$ means that
+$v^{\mathsf T}\Hess G(q)v\geq0$ for every vector $v$.
+On a convex domain, $G$ is convex exactly when this holds at every point.
+Let
+$$
+\Sigma
+=
+\{(x,y,z)\in\R^3:x^2+y^2+z^2=xyz\}
+$$
+be the Markoff surface, and let
+$
+p=(3,3,3)
+$
+be the modular point (see Figure~\ref{fig:markoff-surface-tangent-plane}).
+The following lemma is an elementary consequence of cyclic symmetry (see \cite{Palais1979}).
 
-\begin{lemma}[Cyclic symmetry at the modular point]
+\begin{lemma}[Order-three symmetry at the modular torus]
 \label{lem:symmetry-at-modular}
-Let $F$ be a twice continuously differentiable function of the
-Markoff triple near $(3,3,3)$, invariant under the cyclic permutation
-\eqref{eq:cyclic-trace-permutation}. In logarithmic coordinates,
+Suppose $\widetilde F$ is twice continuously differentiable on
+$\Sigma$ near $p$ and invariant under cyclic permutation of the
+coordinates. On the branch $z=z_-(x,y)$, define
 $$
-F=F(3,3,3)+c p_2+o(p_2)
+F(x,y)=\widetilde F(x,y,z_-(x,y)).
 $$
-for some real $c$. In the trace coordinates $(x,y)$,
+Then
 $$
 \nabla F(3,3)=0,
 \qquad
-\Hess F(3,3)=\frac{2c}{9}
-\begin{pmatrix}2&1\\1&2\end{pmatrix}.
+\Hess F(3,3)
+=
+\kappa
+\begin{pmatrix}
+2&1\\
+1&2
+\end{pmatrix}
 $$
+for some real $\kappa$.
 \end{lemma}
 
 \begin{proof}
-Cyclic permutation acts on $u+v+w=0$ as a rotation through $120^\circ$.
-Thus the linear Taylor term vanishes, and the quadratic term is a
-multiple of $p_2$, since a nonscalar symmetric quadratic form would
-have a principal line preserved by the rotation.
-By \eqref{eq:shape-trace-parametrization}, the derivative of
-$(u,v)\mapsto(x,y)$ at the origin is $3I$. The chain rule at the
-critical point and $p_2=2(u^2+uv+v^2)$ give the stated Hessian.
+Since $\nabla(x^2+y^2+z^2-xyz)(p)=(-3,-3,-3)$,
+the tangent plane is $T_p\Sigma=\{a+b+c=0\}$.
+Translating it
+to $p$ gives the affine tangent plane
+$
+p+T_p\Sigma
+$
+as shown in Figure~\ref{fig:markoff-surface-tangent-plane}.
+
+
+\begin{figure}[ht]
+\centering
+
+\begin{tikzpicture}
+\begin{axis}[
+    width=10.5cm,
+    height=8.5cm,
+    view={210}{24},
+    axis lines=center,
+    axis equal image,
+    xlabel={$x$},
+    ylabel={$y$},
+    zlabel={$z$},
+    xmin=2.1, xmax=6.9,
+    ymin=2.1, ymax=6.9,
+    zmin=2.1, zmax=6.9,
+    ticks=none,
+    enlargelimits=false,
+    clip=false,
+    unbounded coords=jump,
+]
+
+\def\Rho{0.50}
+\def\PlaneRho{0.16}
+
+% Positive Markoff surface.
+% Put w=-u-v and
+% S=e^{2u}+e^{2v}+e^{2w}.
+% Then
+% (x,y,z)=(e^uS,e^vS,e^wS)
+% satisfies x^2+y^2+z^2=xyz.
+
+\addplot3[
+    mesh,
+    color=black!70,
+    line width=0.32pt,
+    samples=27,
+    samples y=27,
+    domain=-\Rho:\Rho,
+    y domain=-\Rho:\Rho,
+]
+(
+{
+ifthenelse(
+max(abs(x),max(abs(y),abs(x+y))) <= \Rho,
+exp(x)*(exp(2*x)+exp(2*y)+exp(-2*x-2*y)),
+nan
+)
+},
+{
+ifthenelse(
+max(abs(x),max(abs(y),abs(x+y))) <= \Rho,
+exp(y)*(exp(2*x)+exp(2*y)+exp(-2*x-2*y)),
+nan
+)
+},
+{
+ifthenelse(
+max(abs(x),max(abs(y),abs(x+y))) <= \Rho,
+exp(-x-y)*(exp(2*x)+exp(2*y)+exp(-2*x-2*y)),
+nan
+)
+}
+);
+
+% Affine tangent plane p+T_p Sigma: x+y+z=9.
+\addplot3[
+    surf,
+    shader=flat,
+    draw=gray!55!black,
+    fill=gray!55,
+    opacity=0.42,
+    samples=2,
+    samples y=2,
+    variable=u,
+    variable y=v,
+    domain=-\PlaneRho:\PlaneRho,
+    y domain=-\PlaneRho:\PlaneRho,
+]
+(
+    {3+3*u},
+    {3+3*v},
+    {3-3*u-3*v}
+);
+
+% Modular point.
+\addplot3[
+    only marks,
+    mark=*,
+    mark size=1.2pt,
+    black
+]
+coordinates {(3,3,3)};
+
+\node[
+    anchor=west,
+    inner sep=2pt
+]
+at (axis cs:2.62,3.02,3.02)
+{$p=(3,3,3)$};
+
+\end{axis}
+\end{tikzpicture}
+
+\caption{
+The Markoff surface near $p=(3,3,3)$ and its affine tangent
+plane.
+}
+\label{fig:markoff-surface-tangent-plane}
+\end{figure}
+
+By \eqref{eq:cyclic-trace-permutation}, $\rho$ fixes $p=(3,3,3)$
+and acts on $T_p\Sigma$ as a rotation through $120^\circ$.
+Hence the three vectors $\xi,\rho\xi,\rho^2\xi$ sum to zero for every $\xi\in T_p\Sigma$.
+Cyclic invariance makes the directional derivatives along these
+vectors equal, so linearity gives
+$$
+3D_\xi\widetilde F(p)
+=
+D_{\xi+\rho\xi+\rho^2\xi}\widetilde F(p)
+=
+0.
+$$
+Thus every tangential derivative vanishes, and the chain rule yields
+$\nabla F(3,3)=0$.
+
+For the second derivatives, let $\gamma$ be a twice continuously
+differentiable curve in $\Sigma$ with $\gamma(0)=p$ and
+$\gamma'(0)=\xi=(a,b,-a-b)$. Since $\nabla F(3,3)=0$,
+the acceleration terms vanish in the chain rule, giving
+$$
+\frac{d^2}{dt^2}\widetilde F(\gamma(t))\bigg|_{t=0}
+=
+F_{xx}(3,3)a^2+2F_{xy}(3,3)ab+F_{yy}(3,3)b^2.
+$$
+This depends only on $\xi$, so it defines a quadratic form
+$Q$ on $T_p\Sigma$. Cyclic invariance gives $Q(\rho\xi)=Q(\xi)$. If $Q$ is not constant on the Euclidean unit circle in $T_p\Sigma$,
+then its maximum is attained at exactly two opposite points.
+A $120^\circ$ rotation cannot preserve this pair, so cyclic
+invariance forces $Q$ to be constant on the unit circle. By homogeneity,
+$$
+Q(\xi)=\kappa|\xi|^2
+=\kappa\bigl(a^2+b^2+(a+b)^2\bigr).
+$$
+Comparing coefficients yields the formula for 
+$
+\Hess F(3,3)
+$ as desired.
 \end{proof}
 
 \section{Farey polygon estimates}
@@ -1909,12 +2095,36 @@ $$
 \subsection{Taylor expansion of the polygon area}
 \label{sec:taylor-expansion}
 
-We expand $\A_6$ at the origin of the logarithmic coordinates from
-Section~\ref{sec:coordinates}. Permuting $u,v,w$ permutes the sectors
-of the polygon, so each homogeneous Taylor term is symmetric. By the
-fundamental theorem of symmetric polynomials
-\cite[p.~21, Remark following (2.4)]{Macdonald}, the terms are
-polynomials in $u+v+w$, $uv+vw+wu$, and $uvw$.
+We now study how $\A_6$ changes near the modular point.
+Lemma~\ref{lem:symmetry-at-modular} determines the form of its Hessian there.
+To organize the higher-order Taylor terms
+and estimate the remainder, we introduce the logarithmic coordinates:
+$$
+(u,v,w):=(\log x,\log y,\log z)-\frac{\log(xyz)}3(1,1,1).
+$$
+Then $u+v+w=0$, and the modular triple $(3,3,3)$ corresponds to
+$(u,v,w)=(0,0,0)$. These coordinates are linearly related to the shear coordinates
+discussed in Bonahon's lecture \cite{Bonahon2018}. We retain $(u,v,w)$ because permutations of the traces simply
+permute these coordinates. Consequently, each homogeneous Taylor
+term of the polygon area $\A_6$ is symmetric in $u,v,w$, simplifying
+the coefficient and remainder estimates below.
+The Markoff equation gives
+\begin{equation}
+\label{eq:shape-trace-parametrization}
+(x,y,z)=(e^{2u}+e^{2v}+e^{2w})(e^u,e^v,e^w).
+\end{equation}
+Conversely, this parametrization satisfies the Markoff equation
+whenever $u+v+w=0$. The quantity $p_2$ introduced in \eqref{eq:p_2} becomes
+$$
+p_2=\frac13\bigl((u-v)^2+(v-w)^2+(w-u)^2\bigr)
+=u^2+v^2+w^2.
+$$
+In these coordinates, we expand $\A_6$ at $u=v=w=0$.
+Symmetry in $u,v,w$ makes each homogeneous Taylor term a symmetric
+polynomial, hence by the fundamental theorem of symmetric polynomials
+\cite[p.~21, Remark following (2.4)]{Macdonald},
+each homogeneous Taylor term is a polynomial in
+$u+v+w$, $uv+vw+wu$, and $uvw$.
 Put $p_3=u^3+v^3+w^3$. Since $u+v+w=0$,
 $uv+vw+wu=-p_2/2$ and $uvw=p_3/3$, only $p_2,p_3$ are needed. Near the modular point, write
 \begin{equation}
@@ -2025,9 +2235,32 @@ that the second derivative in every unit direction is greater than
 $23/900$.
 \end{proposition}
 \begin{proof}
-Apply Lemma~\ref{lem:symmetry-at-modular} with $c=c_{2,0}$.
-The matrix with rows $(2,1)$ and $(1,2)$ has smallest eigenvalue $1$,
-so the lower bound follows from \eqref{eq:quadratic-area-coefficient}.
+By Lemma~\ref{lem:symmetry-at-modular},
+$$
+\nabla\A_6(3,3)=0,
+\qquad
+\Hess\A_6(3,3)=\kappa
+\begin{pmatrix}2&1\\1&2\end{pmatrix}.
+$$
+Let $(x(t),y(t),z(t))$ be the trace curve corresponding to
+$(u,v,w)=(t,0,-t)$ under \eqref{eq:shape-trace-parametrization}.
+Then $(x'(0),y'(0))=(3,0)$, and $\A_6(x(t),y(t))$ has quadratic
+Taylor coefficient $2c_{2,0}$. Since the gradient vanishes, the chain rule gives
+$$
+4c_{2,0}
+=\left.\frac{d^2}{dt^2}\A_6(x(t),y(t))\right|_{t=0}
+=(3,0)\Hess\A_6(3,3)\begin{pmatrix}3\\0\end{pmatrix}
+=18\kappa.
+$$
+Thus $\kappa=2c_{2,0}/9$. For every nonzero vector $(a,b)$,
+\eqref{eq:quadratic-area-coefficient} gives
+$$
+\begin{aligned}
+(a,b)\Hess\A_6(3,3)\begin{pmatrix}a\\b\end{pmatrix}
+&=\frac{2c_{2,0}}{9}\bigl(a^2+b^2+(a+b)^2\bigr)>\frac{23}{900}(a^2+b^2).
+\end{aligned}
+$$
+This is precisely the stated matrix inequality.
 \end{proof}
 
 \subsection{Complex extension and Taylor remainder bounds}
@@ -2700,9 +2933,9 @@ $L(\tau)$ satisfies
 \label{eq:length-tangent-remainder}
 L(t)-L(0)-tL'(0)\leq\frac{27}{10}h^2p_2.
 \end{equation}
-In each initial sector, relabel the traces and logarithmic
-coordinates so that $x,y$ are the endpoint traces and $z$ is the
-trace of the difference of the endpoint classes. Set
+For the general shear-coordinate trace formula, see
+\cite[Lemma~3, page~1575]{BonahonWong2011}. In the sector with
+endpoint traces $x,y$, set
 $$
 A=\begin{pmatrix}
 e^{v-w}&e^{v-w}\\
@@ -2729,7 +2962,8 @@ the traces of the differences are $\tr(V)$ and $\tr(U)$, since
 $\tr(U(UV)^{-1})=\tr(V)$ and $\tr((UV)V^{-1})=\tr(U)$.
 The two initial classes have height one and the heights add at each
 step, so a class of height $h$ has the trace of a product of $h$
-factors from $\{A,B\}$.
+factors from $\{A,B\}$. Permuting the coordinates gives the other
+sectors.
 
 Along $X(\tau)$, the exponents in $A$ have slopes $b-c$, $c-b$,
 and $3a$. Their pairwise differences are twice differences of
@@ -2871,18 +3105,30 @@ for some $\kappa>113/1000$.
 \end{corollary}
 
 \begin{proof}
-Lemma~\ref{lem:symmetry-at-modular} gives the logarithmic expansion
-with coefficient $\kappa$. Near the modular point, the initial
-triangle is reduced after reordering, since all three Vieta moves
-increase the replaced traces. Comparing the quadratic terms in
-Proposition~\ref{prop:omitted-area-comparison} gives
+The area is real analytic near $(3,3)$
+\cite[Section~3, Corollary~1]{McShaneRivinTori}.
+Lemma~\ref{lem:symmetry-at-modular} gives $\nabla\A(3,3)=0$ and
 $$
-\kappa\geq c_{2,0}-\frac1{500}>\frac{113}{1000}
+\Hess\A(3,3)=\lambda
+\begin{pmatrix}2&1\\1&2\end{pmatrix}.
 $$
-by \eqref{eq:quadratic-area-coefficient}. The trace-coordinate
-Hessian in Lemma~\ref{lem:symmetry-at-modular} therefore has
-smallest eigenvalue $2\kappa/9>113/4500$. Continuity gives strict
-convexity on a sufficiently small disk around $(3,3)$.
+The derivative of $(u,v)\mapsto(x,y)$ at the origin is $3I$ by
+\eqref{eq:shape-trace-parametrization}. Since $\nabla\A(3,3)=0$,
+the Hessian in the $(u,v)$ coordinates is $9$ times this matrix.
+Using $p_2=2(u^2+uv+v^2)$ in \eqref{eq:taylor-quadratic} gives
+$$
+\A(X)-\A(\Xmod)=\frac{9\lambda}{2}p_2+o(p_2).
+$$
+Near $(3,3,3)$, the initial triple is reduced after reordering,
+since all three Vieta moves increase the replaced traces.
+Proposition~\ref{prop:omitted-area-comparison} and
+\eqref{eq:quadratic-area-coefficient} give
+$$
+\kappa=9\lambda/2\geq c_{2,0}-1/500>113/1000.
+$$
+The smaller eigenvalue of $\Hess\A(3,3)$ is therefore
+$\lambda>113/4500$. By continuity, the Hessian remains positive
+definite on a sufficiently small disk centered at $(3,3)$.
 \end{proof}
 
 \section{Area comparison for systole less than \texorpdfstring{$7/5$}{7/5}}
@@ -3673,6 +3919,12 @@ OpenAI,
 \emph{The symmetric Mahler conjecture and its equality cases},
 preprint released in the OpenAI math collection, 2026,
 \url{https://github.com/openai/math/blob/main/preprints/The-symmetric-Mahler-conjecture-and-its-equality-cases-September-22-2026/paper.pdf}.
+
+\bibitem[Pal79]{Palais1979}
+R. S. Palais,
+The principle of symmetric criticality,
+\emph{Communications in Mathematical Physics}
+\textbf{69} (1979), no. 1, 19--30.
 
 \bibitem[PP98]{ParkerParkkonen1998}
 J. R. Parker and J. Parkkonen,
