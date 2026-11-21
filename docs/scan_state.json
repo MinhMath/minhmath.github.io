@@ -1,6 +1,6 @@
 {
   "hexagon_html_schema": 2,
-  "hexagon_catalog_next": "https://hexagonmath.org/search?cursor=eyJ2IjoxLCJzb3J0RGF0ZSI6IjIwMjYtMTAtMThUMTQ6NTY6NDIuMjUzWiIsImlkZW50aWZpZXIiOiIyNjEwLjAwMzM4In0&per_page=100&direction=next&page=10",
+  "hexagon_catalog_next": "https://hexagonmath.org/search?cursor=eyJ2IjoxLCJzb3J0RGF0ZSI6IjIwMjYtMDktMDFUMTM6MjI6MzQuNjM1WiIsImlkZW50aWZpZXIiOiIyNjA5LjAwMDAxIn0&per_page=100&direction=next&page=13",
   "hexagon_pages_checked": [
     "/2609.00001v1",
     "/2609.00102v1",
@@ -115,6 +115,7 @@
     "/2610.00185v1",
     "/2610.00186v1",
     "/2610.00187v6",
+    "/2610.00187v7",
     "/2610.00188v1",
     "/2610.00189v1",
     "/2610.00190v1",
@@ -244,12 +245,14 @@
     "/2610.00329v1",
     "/2610.00330v1",
     "/2610.00331v1",
+    "/2610.00331v2",
     "/2610.00332v1",
     "/2610.00333v1",
     "/2610.00334v1",
     "/2610.00335v1",
     "/2610.00336v1",
     "/2610.00337v1",
+    "/2610.00337v2",
     "/2610.00338v1",
     "/2610.00338v2",
     "/2610.00339v1",
@@ -1281,6 +1284,6 @@
     "/2611.00504v1"
   ],
   "hexagon_pdf_pending": [],
-  "last_checked_utc": "2026-11-20T08:42:43+00:00",
+  "last_checked_utc": "2026-11-21T08:22:56+00:00",
   "paper_offset": 0
 }
