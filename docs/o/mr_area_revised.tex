@@ -1760,16 +1760,6 @@ Both functions are positive and symmetric.
 \addplot[black, thick, domain=0.329080436069:5]
 {2*ln((exp(x/2)+1)/(exp(x/2)-1))};
 
-\addplot[only marks, mark=*, mark size=1.3pt]
-coordinates {(1.609437912,\Lv)};
-
-\addplot[only marks, mark=*, mark size=1.4pt]
-coordinates {(1.762747174039,1.762747174039)};
-
-\node[anchor=west, font=\scriptsize, align=left]
-at (axis cs:2.22,1.51)
-{$L_u=L_v$\\$=2\operatorname{arsinh}1$};
-
 \node[font=\large]
 at (axis cs:3.0,3.8)
 {$\mathcal E$};
@@ -1814,10 +1804,9 @@ at (axis cs:3.0,3.8)
 \end{tikzpicture}
 \par\small (b)
 \end{minipage}
-\caption{(a) The admissible region $\mathcal E$, with the parent lengths
-at $P$ marked by the upper dot. (b) The set $\{G\geq0\}$ at
-$L_v=2\arccosh(3/2)$. Its lower boundary gives $\log\delta$, and the
-roots coincide at $P$.}
+\caption{(a) The admissible region $\mathcal E$.
+(b) The set $\{G\geq0\}$ at $L_v=2\arccosh(3/2)$.
+Its lower boundary gives $\log\delta$, and the roots coincide at $P$.}
 \label{fig:deficit-domains}
 \end{figure}
 
