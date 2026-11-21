@@ -1014,7 +1014,7 @@ Section~\ref{sec:completion} completes the proofs of the main theorems.
 Appendix~\ref{sec:cusp-growth} proves the cusp expansion.
 
 \paragraph{Acknowledgements and declaration of AI use.} We thank Greg McShane and Igor Rivin for their influential work.
-The ideas of subdividing the reduced region and estimating area
+The key ideas of subdividing the reduced region and estimating area
 changes along lines through the modular point
 (Sections~\ref{sec:shared-estimates} and
 \ref{sec:large-systole}) arose in part from discussions
@@ -1097,9 +1097,10 @@ A positive Markoff triple $(x,y,z)$ is \emph{reduced} if
 $$2<x\leq y\leq z\leq\frac{xy}{2},$$
 as illustrated in Figure~\ref{fig:area-comparison}(a). Thus, for a
 reduced triple,
-$$
+$
 z=z_-(x,y).
-$$
+$
+
 A Farey triangle is called a \emph{sink} if none of its three
 adjacent Vieta moves decreases the trace it replaces.
 
@@ -2068,11 +2069,12 @@ S_{\Xmod}(u,v)<\frac{11(43/250)^H}{(7/4)^3h(u)h(v)H}.
 $$
 Since $h(u)h(v)\geq H-1$, the height count
 \eqref{eq:farey-height-count} gives
-$$
+\begin{equation*}
 \A(\Xmod)-\A_6(\Xmod)
 <\frac{33(43/250)^7}{7(7/4)^3(1-43/250)}
 <\frac1{200000}.
-$$
+\qedhere
+\end{equation*}
 \end{proof}
 
 \begin{proposition}[An elementary modular upper bound]
@@ -2086,10 +2088,11 @@ $$
 \A_6(\Xmod)<\frac{89183}{100000}.
 $$
 Lemma~\ref{lem:small-modular-remainder} therefore gives
-$$
+\begin{equation*}
 \A(\Xmod)<\frac{89183}{100000}+\frac1{200000}
 <\frac{223}{250}.
-$$
+\qedhere
+\end{equation*}
 \end{proof}
 
 \subsection{Taylor expansion of the polygon area}
@@ -2346,13 +2349,12 @@ Multiplying by $|z|+x\geq0$ and using
 $y^2=(|z|-x)(|z|+x)$ gives
 $y^2(x+5/3)\le 2(|z|+x)$.
 Thus, since $\cos y\geq1-y^2/2>0$,
-$$
-\begin{aligned}
+\begin{equation*}
 \operatorname{Re}e^z
-&=e^x\cos y>\frac{x+5/3}{2}-\frac{y^2(x+5/3)}4 \ge \frac{x+5/3}{2}-\frac{|z|+x}{2}
+=e^x\cos y>\frac{x+5/3}{2}-\frac{y^2(x+5/3)}4 \ge \frac{x+5/3}{2}-\frac{|z|+x}{2}
 =\frac56-\frac{|z|}{2}.
-\end{aligned}
-$$
+\qedhere
+\end{equation*}
 \end{proof}
 
 \begin{proposition}[Complex extension of the polygon area]
@@ -2915,36 +2917,53 @@ approximation along the segment from the modular torus to $X$.
 
 \begin{proposition}
 \label{prop:omitted-area-comparison}
-For every reduced triple,
+If $X$ has reduced logarithmic coordinates $(u,v,w)$, then
 $$
 (\A-\A_6)(X)-(\A-\A_6)(\Xmod)\geq-\frac{p_2}{500}.
 $$
 \end{proposition}
 
 \begin{proof}
-Let $t=\max\{|u|,|v|,|w|\}$ as in \eqref{eq:t}.
-If $t=0$, then both sides are zero. For $t>0$, write
-$(u,v,w)=t(a,b,c)$ and let $X(\tau)$ have logarithmic coordinates
-$\tau(a,b,c)$ with the initial Farey triangle fixed. Thus
-$X(0)=\Xmod$ and $X(t)=X$.
-For a class of sector height $h$, we first show that its length
-$L(\tau)$ satisfies
+Let $t$ be as in \eqref{eq:t}. Write $(u,v,w)=t(a,b,c)$. With the
+initial Farey triangle fixed, let $X(\tau)$ be the torus with
+logarithmic coordinates $\tau(a,b,c)$ for $0\leq\tau\leq t$.
+Then $X(0)=\Xmod$ and $X(t)=X$.
+For a primitive class $\gamma$ of sector height $h$, we first estimate how far
+$L_\gamma(t)$ can lie above its tangent line at $\tau=0$. In particular, we will show that
 \begin{equation}
 \label{eq:length-tangent-remainder}
-L(t)-L(0)-tL'(0)\leq\frac{27}{10}h^2p_2.
+R_\gamma:=L_\gamma(t)-L_\gamma(0)-tL_\gamma'(0)
+\leq\frac{27}{10}h^2p_2.
 \end{equation}
-For a class $w$, put $R_w=L_w(t)-L_w(0)-tL_w'(0)$.
-At height one, the trace is, up to permutation,
-$e^{3a\tau}+e^{(b-c)\tau}+e^{(c-b)\tau}$ by
-\eqref{eq:shape-trace-parametrization}. The exponential rates lie in
-an interval of width at most $2\sqrt{2p_2}/t$, since their differences
-are twice coordinate differences of $a,b,c$, up to sign. The second
-derivative of the log trace is the variance of these rates with
-weights proportional to the exponential terms. It is therefore
-at most $2p_2/t^2$, and Taylor's formula \eqref{eq:taylor-segment}
-bounds the log-trace remainder by $p_2$. Since $s\mapsto2\arccosh(e^s/2)$ is increasing
-and concave with derivative $6/\sqrt5$ at $s=\log3$, we obtain
-$R_w\leq(6/\sqrt5)p_2<(27/10)p_2$.
+
+Suppose first that $h=1$. Let $f(\tau)$ be the logarithm of the trace of
+$\gamma$. By \eqref{eq:shape-trace-parametrization}, after permuting
+$a,b,c$ we have
+$$
+f(\tau)=\log\bigl(e^{3a\tau}+e^{(b-c)\tau}+e^{(c-b)\tau}\bigr).
+$$
+Since $a+b+c=0$, the differences between the three exponential rates
+are $2(a-b)$, $2(a-c)$, and $2(b-c)$. Each has absolute value at most
+$2\sqrt{2p_2}/t$, since $p_2=t^2(a^2+b^2+c^2)$.
+
+Differentiating twice, we find that $f''(\tau)$ is the weighted variance
+of the three rates, with weights given by the three exponential terms
+divided by their sum. Measuring squared distances from the midpoint
+of the interval containing the rates gives an upper bound for this
+variance. Each rate lies within $\sqrt{2p_2}/t$ of that midpoint, so
+$f''(\tau)\leq 2p_2/t^2$. Taylor's formula \eqref{eq:taylor-segment}
+therefore gives $f(t)-f(0)-tf'(0)\leq p_2$.
+
+To pass from trace to length, write $L_\gamma=g\circ f$, where
+$g(s)=2\arccosh(e^s/2)$. The function $g$ is increasing and concave,
+so its graph lies below its tangent line at $f(0)=\log 3$.
+Using $L_\gamma'(0)=g'(\log 3)f'(0)$, we obtain
+$$
+R_\gamma
+\leq g'(\log 3)\bigl(f(t)-f(0)-tf'(0)\bigr)
+\leq\frac{6}{\sqrt{5}}p_2
+\leq\frac{27}{10}p_2.
+$$
 
 At $\tau=t$ the initial triangle is reduced, and near $\tau=0$ its
 Vieta moves strictly increase the replaced traces. Thus outward
