@@ -4,7 +4,7 @@
 
 **Total citation records:** 27 | **Bibliography verified:** 25 | **Scholar-listed, full text pending:** 2 | **Self citations:** 13 | **Non-self citations:** 14
 
-Collection status: **partial**. Last saved discovery: 2026-11-23T09:18:57+00:00.
+Collection status: **partial**. Last saved discovery: 2026-11-24T11:08:53+00:00.
 
 | Canonical paper | Verified citations | Scholar-listed | Unverified candidates |
 |---|---:|---:|---:|
@@ -110,8 +110,8 @@ Collection status: **partial**. Last saved discovery: 2026-11-23T09:18:57+00:00.
 | publisher_bibliographies | completed_requests |
 | known_bibliographies | completed_requests |
 | zenodo_authors | completed_requests |
-| openalex | completed_requests |
-| openalex_fulltext | completed_requests |
+| openalex | deferred_after_error |
+| openalex_fulltext | deferred_after_error |
 | semantic | deferred_after_error |
 | opencitations | completed_requests |
 | hexagon | completed_requests |
@@ -119,6 +119,8 @@ Collection status: **partial**. Last saved discovery: 2026-11-23T09:18:57+00:00.
 
 Collection limitations:
 
+- zenodo.org: HTTP 403 (authentication or access required); remaining requests to this host deferred until the next run
+- api.openalex.org: HTTP 429; remaining requests to this host deferred until the next run
 - api.semanticscholar.org: HTTP 429; remaining requests to this host deferred until the next run
 - PDF HTTP 403: https://onlinelibrary.wiley.com/doi/pdfdirect/10.1112/blms.13080
 

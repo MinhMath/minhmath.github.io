@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-11-23T09:18:57+00:00",
+  "generated_utc": "2026-11-24T11:08:53+00:00",
   "collection_status": "partial",
   "sources": {
     "publisher_bibliographies": {
@@ -18,14 +18,14 @@
       "verified_records": 0
     },
     "openalex": {
-      "papers_attempted": 13,
-      "new_records": 12,
-      "status": "completed_requests"
+      "papers_attempted": 3,
+      "new_records": 2,
+      "status": "deferred_after_error"
     },
     "openalex_fulltext": {
-      "papers_attempted": 13,
-      "new_records": 14,
-      "status": "completed_requests"
+      "papers_attempted": 3,
+      "new_records": 2,
+      "status": "deferred_after_error"
     },
     "semantic": {
       "papers_attempted": 4,
@@ -74,6 +74,8 @@
     }
   ],
   "errors": [
+    "zenodo.org: HTTP 403 (authentication or access required); remaining requests to this host deferred until the next run",
+    "api.openalex.org: HTTP 429; remaining requests to this host deferred until the next run",
     "api.semanticscholar.org: HTTP 429; remaining requests to this host deferred until the next run",
     "PDF HTTP 403: https://onlinelibrary.wiley.com/doi/pdfdirect/10.1112/blms.13080"
   ],
