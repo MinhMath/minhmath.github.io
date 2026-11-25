@@ -3990,5 +3990,24 @@
         "url": "https://doi.org/10.48550/arxiv.2406.14538"
       }
     ]
+  },
+  {
+    "target": "DLN",
+    "title": "Polyhedra, Moduli, and Quantum Geometry: Variational principles, spectral methods, and computation",
+    "authors": "Igor Rivin",
+    "platform": "web",
+    "id": "polyhedra.dimensionreducers.ai",
+    "url": "https://polyhedra.dimensionreducers.ai/",
+    "venue": "Research monograph, web working edition, 2026.",
+    "year": 2026,
+    "verified": true,
+    "source": "Verified in the author's monograph bibliography and Section 30.8",
+    "pdf_url": "https://polyhedra.dimensionreducers.ai/downloads/monograph.pdf",
+    "evidence_url": "https://polyhedra.dimensionreducers.ai/references",
+    "evidence_locator": "Reference [113], PDF page 229; Section 30.8, PDF pages 208–209",
+    "evidence_version": "Web working edition, manuscript dated 30 October 2026, checked 25 November 2026",
+    "evidence_excerpt": "[113] N. M. Doan, X. Li, and V. Nguyen, Stable-norm boundary geometry on once-punctured tori, preprint, version 3, 9 October 2026. arXiv:2605.14574v3.",
+    "evidence_note": "The bibliography uses a different title, but the authors and arXiv identifier identify the DLN paper. Section 30.8 discusses Theorem 4.7 and Lemma 4.8; Rivin states that their proofs have not been independently audited and are not used as proved inputs.",
+    "checked_utc": "2026-11-25"
   }
 ]
