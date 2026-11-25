@@ -361,5 +361,23 @@
     "abstract_version": "v1",
     "abstract_license": "https://creativecommons.org/licenses/by/4.0/",
     "abstract_checked_utc": "2026-11-13T08:00:09+00:00"
+  },
+  {
+    "platform": "web",
+    "id": "polyhedra.dimensionreducers.ai",
+    "title": "Polyhedra, Moduli, and Quantum Geometry: Variational principles, spectral methods, and computation",
+    "authors": [
+      "Igor Rivin"
+    ],
+    "year": 2026,
+    "venue": "Research monograph, web working edition, manuscript dated 30 October 2026.",
+    "first_online": "2026-11-06",
+    "first_online_source": "https://x.noodl3.net/igriv",
+    "first_online_note": "Public availability confirmed by the author's 6 November 2026 announcement linking the free digital text. The manuscript is dated 30 October 2026; its initial online posting date is not established.",
+    "abstract": "This monograph connects polyhedral geometry, Weil–Petersson theory, quantum invariants, Dehn filling, and surface dynamics through variations of volume and length. It studies moduli-volume comparisons, tetrahedral asymptotics, volume Hessians and electrical networks, and the geometric response to Dehn filling. For surfaces, it develops twisted trace constructions, conditional relations between weighted counting and mixing, and estimates separating norm-ball geometry from Möbius cancellation in primitive counting. The exposition distinguishes proved statements, conditional arguments, numerical evidence, and open problems.",
+    "abstract_kind": "summary",
+    "abstract_source": "https://polyhedra.dimensionreducers.ai/introduction",
+    "abstract_version": "Web working edition, manuscript dated 30 October 2026",
+    "abstract_checked_utc": "2026-11-25"
   }
 ]
