@@ -4159,5 +4159,23 @@
     "evidence_sha256": "93e23f14ba83b49f242cf13f388d22b8a26558b2098fddce047ad2c847f70b16",
     "evidence_version": "2611.00976v1",
     "checked_utc": "2026-11-26T13:43:30+00:00"
+  },
+  {
+    "title": "Identities for hyperbolic tori",
+    "authors": "Rafael M. Saavedra",
+    "year": 2026,
+    "platform": "web",
+    "id": "saavedra-tori",
+    "url": "https://people.math.harvard.edu/~saavedra/tori.pdf",
+    "pdf_url": "https://people.math.harvard.edu/~saavedra/tori.pdf",
+    "target": "DLN",
+    "verified": true,
+    "source": "Verified by direct bibliography inspection",
+    "evidence_url": "https://people.math.harvard.edu/~saavedra/tori.pdf",
+    "evidence_locator": "Page 24, reference [DLN26]; in-text citation on page 10",
+    "evidence_excerpt": "[DLN26] Nhat Minh Doan, Xiaobin Li, and Van Nguyen. McShane-Rivin norm balls and simple-length multiplicities, 2026.",
+    "evidence_sha256": "8076ee27eec808bb6677a9872aeac180f539ca03f22da79dfc2c073fba752372",
+    "evidence_version": "Author-hosted draft; PDF creation timestamp 1 November 2026 UTC",
+    "checked_utc": "2026-11-26T13:59:56+00:00"
   }
 ]

@@ -2,13 +2,13 @@
 
 > **Verified lower bound, not an exact worldwide total.** Verified references and unverified discoveries are recorded separately. A missing or failed source is not evidence of zero citations.
 
-**Total citation records:** 29 | **Bibliography verified:** 27 | **Scholar-listed, full text pending:** 2 | **Self citations:** 13 | **Non-self citations:** 16
+**Total citation records:** 30 | **Bibliography verified:** 28 | **Scholar-listed, full text pending:** 2 | **Self citations:** 13 | **Non-self citations:** 17
 
 Collection status: **partial**. Last saved discovery: 2026-11-26T09:41:14+00:00.
 
 | Canonical paper | Verified citations | Scholar-listed | Unverified candidates |
 |---|---:|---:|---:|
-| [Stable-norm boundary geometry on once-punctured tori](https://arxiv.org/abs/2605.14574) | 9 | 0 | 0 |
+| [Stable-norm boundary geometry on once-punctured tori](https://arxiv.org/abs/2605.14574) | 10 | 0 | 0 |
 | [Optimal special polygons for the congruence subgroups Gamma_0(p) and Gamma_0(pq)](https://doi.org/10.1007/s12220-025-02051-y) | 5 | 0 | 0 |
 | [Measuring pants](https://doi.org/10.1090/tran/8893) | 4 | 1 | 0 |
 | [Ortho-integral surfaces](https://doi.org/10.1016/j.aim.2025.110162) | 3 | 0 | 0 |
@@ -34,6 +34,8 @@ Collection status: **partial**. Last saved discovery: 2026-11-26T09:41:14+00:00.
   Reference excerpt: 5. Harvey Cohn,Approach to Markoff’s Minimal Forms Through Modular Functions, Annals of Mathe- matics61(1955), no. 1, 1–12. MR0067935 6. Charles de la Vall´ ee Poussin,Sur la fonctionζ(s)de Riemann et le nombre des nombres premiers inf´ erieurs ` a une limite donn´ ee, M´ emoires de l’Acad´ emie royale de Belgique59(1899), no. 1, 1–74. 7. Nhat Minh Doan, Xiaobin Li, and Van Nguyen,Stable-norm boundary geometry on once-punctured tori, October 2026, arXiv:2605.14574v3.
 - [Density of Triple Coincidences in the Simple Length Spectrum of One-holed Tori](https://zenodo.org/records/22998822) — Hu Tan; Ying Zhang; independent. Verified in Zenodo PDF bibliography.
   Reference excerpt: [3] N. M. Doan, X. Li, and V . Nguyen, McShane–Rivin norm balls and simple-length multi- plicities. 2026, arXiv:2605.14574
+- [Identities for hyperbolic tori](https://people.math.harvard.edu/~saavedra/tori.pdf) — Rafael M. Saavedra; independent. Verified by direct bibliography inspection.
+  Reference excerpt: [DLN26] Nhat Minh Doan, Xiaobin Li, and Van Nguyen. McShane-Rivin norm balls and simple-length multiplicities, 2026.
 - [PARAMETER MONOTONICITY FOR GENERALIZED k-MARKOV NUMBERS](https://hexagonmath.org/2611.00023v2) — Qiyue Tang; independent. Verified in HexagonMath HTML bibliography.
   Reference excerpt: N. M. Doan, X. Li, and V. Nguyen, Stable-norm boundary geometry on once-punctured tori , arXiv:2605.14574v3 (https://arxiv.org/abs/2605.14574v3) (2026). arXiv
 - [Patterns in the Markov Numbers and Their Generalizations](https://arxiv.org/abs/2609.14149) — Cormac O'Sullivan; independent. Verified in arXiv PDF bibliography.

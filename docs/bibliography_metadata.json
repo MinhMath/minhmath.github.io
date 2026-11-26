@@ -398,5 +398,22 @@
     "abstract_version": "v1",
     "abstract_license": "https://creativecommons.org/licenses/by/4.0/",
     "abstract_checked_utc": "2026-11-26T13:43:30+00:00"
+  },
+  {
+    "title": "Identities for hyperbolic tori",
+    "authors": [
+      "Rafael M. Saavedra"
+    ],
+    "year": 2026,
+    "platform": "web",
+    "id": "saavedra-tori",
+    "venue": "Author-hosted draft, in preparation (2026). Exact first-online date not stated.",
+    "citation_year_source": "https://people.math.harvard.edu/~saavedra/tori.pdf",
+    "citation_year_note": "The undated draft PDF was created on 1 November 2026 UTC; this timestamp does not establish its first public posting date. The author lists it as in preparation.",
+    "abstract": "This draft studies identities expressing lengths and Fenchel–Nielsen twists of simple closed geodesics on once-punctured hyperbolic tori as sums over their simple length spectra. It derives these formulas from the convex geometry of the measured-lamination length ball and its dual, and applies them to the Weil–Petersson symplectic form and the Hu–Tan dilogarithm identity. It also investigates connections with the Thurston metric and interaction strength.",
+    "abstract_kind": "summary",
+    "abstract_source": "https://people.math.harvard.edu/~saavedra/tori.pdf",
+    "abstract_version": "Author-hosted draft",
+    "abstract_checked_utc": "2026-11-26T13:59:56+00:00"
   }
 ]
