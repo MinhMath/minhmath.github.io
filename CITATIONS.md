@@ -2,13 +2,13 @@
 
 > **Verified lower bound, not an exact worldwide total.** Verified references and unverified discoveries are recorded separately. A missing or failed source is not evidence of zero citations.
 
-**Total citation records:** 27 | **Bibliography verified:** 25 | **Scholar-listed, full text pending:** 2 | **Self citations:** 13 | **Non-self citations:** 14
+**Total citation records:** 28 | **Bibliography verified:** 26 | **Scholar-listed, full text pending:** 2 | **Self citations:** 13 | **Non-self citations:** 15
 
-Collection status: **partial**. Last saved discovery: 2026-11-25T09:56:44+00:00.
+Collection status: **partial**. Last saved discovery: 2026-11-26T09:41:14+00:00.
 
 | Canonical paper | Verified citations | Scholar-listed | Unverified candidates |
 |---|---:|---:|---:|
-| [Stable-norm boundary geometry on once-punctured tori](https://arxiv.org/abs/2605.14574) | 8 | 0 | 0 |
+| [Stable-norm boundary geometry on once-punctured tori](https://arxiv.org/abs/2605.14574) | 9 | 0 | 0 |
 | [Optimal special polygons for the congruence subgroups Gamma_0(p) and Gamma_0(pq)](https://doi.org/10.1007/s12220-025-02051-y) | 5 | 0 | 0 |
 | [Measuring pants](https://doi.org/10.1090/tran/8893) | 4 | 1 | 0 |
 | [Ortho-integral surfaces](https://doi.org/10.1016/j.aim.2025.110162) | 3 | 0 | 0 |
@@ -38,6 +38,8 @@ Collection status: **partial**. Last saved discovery: 2026-11-25T09:56:44+00:00.
   Reference excerpt: N. M. Doan, X. Li, and V. Nguyen, Stable-norm boundary geometry on once-punctured tori , arXiv:2605.14574v3 (https://arxiv.org/abs/2605.14574v3) (2026). arXiv
 - [Patterns in the Markov Numbers and Their Generalizations](https://arxiv.org/abs/2609.14149) — Cormac O'Sullivan; independent. Verified in arXiv PDF bibliography.
   Reference excerpt: [DLN26] Nhat Minh Doan, Xiaobin Li, and V an Nguyen. McShane- Rivin norm balls and simple-length multiplici- ties. arXiv: 2605.14574, 2026.
+- [Polyhedra, Moduli, and Quantum Geometry: Variational principles, spectral methods, and computation](https://polyhedra.dimensionreducers.ai/) — Igor Rivin; independent. Verified in the author's monograph bibliography and Section 30.8.
+  Reference excerpt: [113] N. M. Doan, X. Li, and V. Nguyen, Stable-norm boundary geometry on once-punctured tori, preprint, version 3, 9 October 2026. arXiv:2605.14574v3.
 - [Simple Length Multiplicity on X(n)](https://arxiv.org/abs/2611.16078) — Jonah Gaster; Dídac Martínez-Granado; Christopher-Lloyd Simon; independent. Verified by direct bibliography inspection.
   Reference excerpt: [DLN26] Nhat Minh Doan, Xiaobin Li, and Van Nguyen. McShane-Rivin norm balls and simple-length multiplicities, 2026. 2, 3
 - [The torus with asymptotically the fewest simple closed geodesics](https://hexagonmath.org/2610.00159v1) — Phuc Thinh Dang; Trong Toan Dao; Nhat Minh Doan; shared author. Verified in HexagonMath HTML bibliography.
