@@ -71,7 +71,25 @@ jobs:
         uses: actions/upload-pages-artifact@v4
         with:
           path: docs
+          name: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
+      - name: Wait for deployment package
+        env:
+          PAGES_ARTIFACT: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
+        run: |
+          for attempt in {1..12}; do
+            count=$(curl --fail --silent --show-error --max-time 20 \
+              "https://api.github.com/repos/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID/artifacts" \
+              | jq --arg name "$PAGES_ARTIFACT" '[.artifacts[] | select(.name == $name and .expired == false)] | length') || count=0
+            if [ "$count" = 1 ]; then
+              exit 0
+            fi
+            sleep 5
+          done
+          echo "Deployment package is not yet visible through the GitHub API."
+          exit 1
       - name: Deploy personal website
         id: deploy
         uses: actions/deploy-pages@v4
+        with:
+          artifact_name: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
 
