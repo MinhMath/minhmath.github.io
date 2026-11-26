@@ -1,14 +1,14 @@
 {
   "counts": {
-    "verified": 28,
-    "independent": 16,
+    "verified": 27,
+    "independent": 15,
     "overlap": 12,
     "unknown_authorship": 0,
-    "unique_citing_works": 24,
-    "total_citations": 30,
+    "unique_citing_works": 23,
+    "total_citations": 29,
     "scholar_listed": 2,
     "self_citations": 13,
-    "non_self_citations": 17,
+    "non_self_citations": 16,
     "unclassified_citations": 0,
     "candidates": 1,
     "papers": 13
@@ -944,47 +944,6 @@
       "abstract_source": "https://polyhedra.dimensionreducers.ai/introduction",
       "abstract_version": "Web working edition, manuscript dated 30 October 2026",
       "abstract_checked_utc": "2026-11-25",
-      "independence": "independent",
-      "self_citation": false
-    },
-    {
-      "title": "Identities for hyperbolic tori",
-      "authors": "Rafael M. Saavedra",
-      "year": 2026,
-      "platform": "web",
-      "id": "saavedra-tori",
-      "url": "https://people.math.harvard.edu/~saavedra/tori.pdf",
-      "pdf_url": "https://people.math.harvard.edu/~saavedra/tori.pdf",
-      "target": "DLN",
-      "verified": true,
-      "source": "Verified by direct bibliography inspection",
-      "evidence_url": "https://people.math.harvard.edu/~saavedra/tori.pdf",
-      "evidence_locator": "Page 24, reference [DLN26]; in-text citation on page 10",
-      "evidence_excerpt": "[DLN26] Nhat Minh Doan, Xiaobin Li, and Van Nguyen. McShane-Rivin norm balls and simple-length multiplicities, 2026.",
-      "evidence_sha256": "8076ee27eec808bb6677a9872aeac180f539ca03f22da79dfc2c073fba752372",
-      "evidence_version": "Author-hosted draft; PDF creation timestamp 1 November 2026 UTC",
-      "checked_utc": "2026-11-26T13:59:56+00:00",
-      "work_id": "web:saavedra-tori",
-      "identifiers": [
-        "web:saavedra-tori"
-      ],
-      "evidence": [
-        {
-          "source": "Verified by direct bibliography inspection",
-          "url": "https://people.math.harvard.edu/~saavedra/tori.pdf",
-          "evidence_url": "https://people.math.harvard.edu/~saavedra/tori.pdf",
-          "evidence_excerpt": "[DLN26] Nhat Minh Doan, Xiaobin Li, and Van Nguyen. McShane-Rivin norm balls and simple-length multiplicities, 2026.",
-          "checked_utc": "2026-11-26T13:59:56+00:00"
-        }
-      ],
-      "citation_year_source": "https://people.math.harvard.edu/~saavedra/tori.pdf",
-      "citation_year_note": "The undated draft PDF was created on 1 November 2026 UTC; this timestamp does not establish its first public posting date. The author lists it as in preparation.",
-      "venue": "Author-hosted draft, in preparation (2026). Exact first-online date not stated.",
-      "abstract": "This draft studies identities expressing lengths and Fenchel–Nielsen twists of simple closed geodesics on once-punctured hyperbolic tori as sums over their simple length spectra. It derives these formulas from the convex geometry of the measured-lamination length ball and its dual, and applies them to the Weil–Petersson symplectic form and the Hu–Tan dilogarithm identity. It also investigates connections with the Thurston metric and interaction strength.",
-      "abstract_kind": "summary",
-      "abstract_source": "https://people.math.harvard.edu/~saavedra/tori.pdf",
-      "abstract_version": "Author-hosted draft",
-      "abstract_checked_utc": "2026-11-26T13:59:56+00:00",
       "independence": "independent",
       "self_citation": false
     },
