@@ -4141,5 +4141,23 @@
         "url": "https://doi.org/10.48550/arxiv.2406.14538"
       }
     ]
+  },
+  {
+    "title": "Leopard spots, CM points, and class numbers",
+    "authors": "Danny Calegari",
+    "platform": "hexagon",
+    "id": "2611.00976",
+    "url": "https://hexagonmath.org/2611.00976v1",
+    "pdf_url": "https://hexagonmath.org/pdf/2611.00976v1",
+    "year": 2026,
+    "target": "arithmetic",
+    "verified": true,
+    "source": "Verified by direct bibliography inspection",
+    "evidence_url": "https://hexagonmath.org/pdf/2611.00976v1",
+    "evidence_locator": "Page 16, reference [DL]; page 2, Section 1.2",
+    "evidence_excerpt": "[DL] Nhat Minh Doan and Khanh Le, Some arithmetic aspects of ortho-integral surfaces, arXiv:2504.09403.",
+    "evidence_sha256": "93e23f14ba83b49f242cf13f388d22b8a26558b2098fddce047ad2c847f70b16",
+    "evidence_version": "2611.00976v1",
+    "checked_utc": "2026-11-26T13:43:30+00:00"
   }
 ]

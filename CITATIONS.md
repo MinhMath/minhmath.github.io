@@ -2,7 +2,7 @@
 
 > **Verified lower bound, not an exact worldwide total.** Verified references and unverified discoveries are recorded separately. A missing or failed source is not evidence of zero citations.
 
-**Total citation records:** 28 | **Bibliography verified:** 26 | **Scholar-listed, full text pending:** 2 | **Self citations:** 13 | **Non-self citations:** 15
+**Total citation records:** 29 | **Bibliography verified:** 27 | **Scholar-listed, full text pending:** 2 | **Self citations:** 13 | **Non-self citations:** 16
 
 Collection status: **partial**. Last saved discovery: 2026-11-26T09:41:14+00:00.
 
@@ -13,8 +13,8 @@ Collection status: **partial**. Last saved discovery: 2026-11-26T09:41:14+00:00.
 | [Measuring pants](https://doi.org/10.1090/tran/8893) | 4 | 1 | 0 |
 | [Ortho-integral surfaces](https://doi.org/10.1016/j.aim.2025.110162) | 3 | 0 | 0 |
 | [The torus with asymptotically the fewest simple closed geodesics](https://hexagonmath.org/2610.00159) | 2 | 0 | 0 |
+| [Some arithmetic aspects of ortho-integral surfaces](https://doi.org/10.1090/tran/9657) | 2 | 0 | 0 |
 | [Almost all simple lengths are unique up to isometry](https://hexagonmath.org/2610.00298) | 1 | 0 | 0 |
-| [Some arithmetic aspects of ortho-integral surfaces](https://doi.org/10.1090/tran/9657) | 1 | 0 | 0 |
 | [Geometric filling curves on punctured surfaces](https://doi.org/10.1017/S0017089522000404) | 1 | 1 | 0 |
 | [Density of length ratios on Teichmüller space](https://arxiv.org/abs/2610.24700) | 0 | 0 | 0 |
 | [Graded Bridgeman dilogarithm identities on hyperbolic surfaces](https://arxiv.org/abs/2601.03876) | 0 | 0 | 0 |
@@ -59,6 +59,8 @@ Collection status: **partial**. Last saved discovery: 2026-11-26T09:41:14+00:00.
 
 ### Some arithmetic aspects of ortho-integral surfaces
 
+- [Leopard spots, CM points, and class numbers](https://hexagonmath.org/2611.00976v1) — Danny Calegari; independent. Verified by direct bibliography inspection.
+  Reference excerpt: [DL] Nhat Minh Doan and Khanh Le, Some arithmetic aspects of ortho-integral surfaces, arXiv:2504.09403.
 - [Ortho-integral surfaces](https://doi.org/10.1016/j.aim.2025.110162) — Nhat Minh Doan; shared author. Verified in publisher-deposited Crossref bibliography.
   Reference excerpt: N.M. Doan, K. Le, Some arithmetic aspects of ortho-integral surfaces, in preparation.
 

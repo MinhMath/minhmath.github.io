@@ -379,5 +379,24 @@
     "abstract_source": "https://polyhedra.dimensionreducers.ai/introduction",
     "abstract_version": "Web working edition, manuscript dated 30 October 2026",
     "abstract_checked_utc": "2026-11-25"
+  },
+  {
+    "platform": "hexagon",
+    "id": "2611.00976",
+    "title": "Leopard spots, CM points, and class numbers",
+    "authors": [
+      "Danny Calegari"
+    ],
+    "year": 2026,
+    "venue": "Hexagon:2611.00976v1.",
+    "first_online": "2026-11-24",
+    "first_online_source": "https://hexagonmath.org/2611.00976v1",
+    "first_online_note": "Initial Hexagon posting, version 1, dated 24 November 2026.",
+    "abstract": "Basmajian's identity writes the area of the totally geodesic boundary of a hyperbolic manifold as a sum over its orthogeodesics. Behind it is a tiling of the boundary, up to measure zero, by round disks, one for each orthogeodesic. We study this tiling in arithmetic examples. Cut the Bianchi orbifold $\\mathbb{H}^3/\\mathrm{PSL}(2,O_k)$ open along its totally geodesic modular surface. We show that the disks are centred at CM points of the modular surface. More generally, consider all orthogeodesics leaving one side of the surface and returning to it, now allowed to cross it. For $n$ satisfying a congruence condition, the number of them with $\\cosh$-length $n$ is the Hurwitz class number $H(4(n^2-1)/|D_k|)$. Combined with the counting of common perpendiculars, this gives, for $k\\ne\\mathbb{Q}(i)$, $\\sum_{1<n\\le Y}H(4(n^2-1)/|D_k|)\\sim\\frac{2\\pi}{3}Y^2/(|D_k|^{3/2}L(2,\\chi_{D_k}))$, the sum running over the admissible $n$. This is a three-dimensional analogue of $\\sum_{q\\le Q}\\varphi(q)\\sim 3Q^2/\\pi^2$, which expresses Euler's $\\zeta(2)=\\pi^2/6$. We also explain, heuristically, how Basmajian's identity for the modular orbifold, opened up into an orbifold with geodesic boundary, already contains Euler's identity.",
+    "abstract_kind": "original",
+    "abstract_source": "https://hexagonmath.org/2611.00976v1",
+    "abstract_version": "v1",
+    "abstract_license": "https://creativecommons.org/licenses/by/4.0/",
+    "abstract_checked_utc": "2026-11-26T13:43:30+00:00"
   }
 ]
