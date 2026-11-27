@@ -1,6 +1,6 @@
 {
   "hexagon_html_schema": 2,
-  "hexagon_catalog_next": "https://hexagonmath.org/search?cursor=eyJ2IjoxLCJzb3J0RGF0ZSI6IjIwMjYtMTAtMTVUMTg6MDQ6MDQuNjA4WiIsImlkZW50aWZpZXIiOiIyNjEwLjAwMjY2In0&per_page=100&direction=next&page=13",
+  "hexagon_catalog_next": null,
   "hexagon_pages_checked": [
     "/2609.00001v1",
     "/2609.00102v1",
@@ -157,6 +157,7 @@
     "/2610.00229v1",
     "/2610.00230v1",
     "/2610.00231v1",
+    "/2610.00231v2",
     "/2610.00232v1",
     "/2610.00234v1",
     "/2610.00235v2",
@@ -1551,6 +1552,6 @@
     "/2611.00829v1"
   ],
   "hexagon_pdf_pending": [],
-  "last_checked_utc": "2026-11-26T09:41:02+00:00",
+  "last_checked_utc": "2026-11-27T09:46:50+00:00",
   "paper_offset": 0
 }
