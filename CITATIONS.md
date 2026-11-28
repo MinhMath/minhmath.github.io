@@ -4,7 +4,7 @@
 
 **Total citation records:** 29 | **Bibliography verified:** 27 | **Scholar-listed, full text pending:** 2 | **Self citations:** 13 | **Non-self citations:** 16
 
-Collection status: **partial**. Last saved discovery: 2026-11-27T09:47:00+00:00.
+Collection status: **partial**. Last saved discovery: 2026-11-28T09:02:16+00:00.
 
 | Canonical paper | Verified citations | Scholar-listed | Unverified candidates |
 |---|---:|---:|---:|
@@ -59,8 +59,8 @@ Collection status: **partial**. Last saved discovery: 2026-11-27T09:47:00+00:00.
 
 ### Some arithmetic aspects of ortho-integral surfaces
 
-- [Leopard spots, CM points, and class numbers](https://hexagonmath.org/2611.00976v1) — Danny Calegari; independent. Verified by direct bibliography inspection.
-  Reference excerpt: [DL] Nhat Minh Doan and Khanh Le, Some arithmetic aspects of ortho-integral surfaces, arXiv:2504.09403.
+- [Leopard spots, CM points, and class numbers](https://hexagonmath.org/2611.00976v1) — Danny Calegari; independent. Verified in HexagonMath HTML bibliography.
+  Reference excerpt: Nhat Minh Doan and Khanh Le, Some arithmetic aspects of ortho-integral surfaces , arXiv:2504.09403. arXiv
 - [Ortho-integral surfaces](https://doi.org/10.1016/j.aim.2025.110162) — Nhat Minh Doan; shared author. Verified in publisher-deposited Crossref bibliography.
   Reference excerpt: N.M. Doan, K. Le, Some arithmetic aspects of ortho-integral surfaces, in preparation.
 
@@ -119,13 +119,12 @@ Collection status: **partial**. Last saved discovery: 2026-11-27T09:47:00+00:00.
 | semantic | deferred_after_error |
 | opencitations | completed_requests |
 | hexagon | completed_requests |
-| zenodo | partial |
+| zenodo | completed_requests |
 
 Collection limitations:
 
 - api.semanticscholar.org: HTTP 429; remaining requests to this host deferred until the next run
 - PDF HTTP 403: https://onlinelibrary.wiley.com/doi/pdfdirect/10.1112/blms.13080
-- zenodo.org: HTTP 429; remaining requests to this host deferred until the next run
 
 The dashboard and this report use [the same normalized ledger](docs/ledger.json).
 Independent citations exclude identified shared authors; incomplete or ambiguous author names are recorded separately.
